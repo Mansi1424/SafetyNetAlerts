@@ -6,33 +6,55 @@ import Mansi.SafetyNetAlerts.Model.Firestation;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 public class FireStationController {
 
-    @GetMapping("/firestation/get")
+    private final List<Firestation> firestationList;
+
+    public FireStationController(List<Firestation> firestationList) throws IOException {
+
+        this.firestationList = JsonToPojoFirestation.returnFirestationsList();
+    }
+
+    @GetMapping("/firestation")
     public List<Firestation> getFirestations() throws IOException {
 
-        return JsonToPojoFirestation.returnFirestationsList();
+        return firestationList;
 
     }
 
 
-    @PostMapping("/firestation/post")
+    @PostMapping("/firestation")
     @ResponseBody
     public List<Firestation> addFirestation(@RequestBody Firestation newFirestation) throws IOException {
 
-        List<Firestation> firestationsArrayList = JsonToPojoFirestation.returnFirestationsList();
-        System.out.println("Before adding " + firestationsArrayList);
+        System.out.println("Before adding " + firestationList);
         System.out.println("New Firestation is " + newFirestation);
 
-        firestationsArrayList.add(newFirestation);
-        System.out.println("After adding new firestation " + firestationsArrayList);
+        firestationList.add(newFirestation);
+        System.out.println("After adding new firestation " + firestationList);
 
-        return firestationsArrayList;
+        return firestationList;
 
+    }
+
+//    @PutMapping("/firestation/put{existingFirestation}")
+//    @ResponseBody
+//    public Firestation replaceFirestation(@PathVariable Firestation existingFirestation, Firestation replacementFirestation) {
+//
+//        return firestationList.set(firestationList.indexOf(existingFirestation), replacementFirestation);
+//
+//    }
+
+    @DeleteMapping("/firestation/{address}")
+    public Firestation deleteFirestation(@PathVariable String address) {
+
+        Firestation firestationObject = firestationList.stream().filter(firestation -> address.equals(firestation.getAddress())).findFirst().orElse(null);
+        firestationList.remove(firestationObject);
+
+        return firestationObject;
     }
 
 
