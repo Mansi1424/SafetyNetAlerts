@@ -1,12 +1,16 @@
 package Mansi.SafetyNetAlerts.Controller;
 
 
-import Mansi.SafetyNetAlerts.JsonToPojo.JsonToPojoFirestation;
+import Mansi.SafetyNetAlerts.JsonToPojo.EmptyJsonBody;
+import Mansi.SafetyNetAlerts.JsonToPojo.ReadJson;
 import Mansi.SafetyNetAlerts.Model.Firestation;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class FireStationController {
@@ -15,8 +19,9 @@ public class FireStationController {
 
     public FireStationController(List<Firestation> firestationList) throws IOException {
 
-        this.firestationList = JsonToPojoFirestation.returnFirestationsList();
+        this.firestationList = ReadJson.returnFirestationsList();
     }
+
 
     @GetMapping("/firestation")
     public List<Firestation> getFirestations() throws IOException {
@@ -28,35 +33,44 @@ public class FireStationController {
 
     @PostMapping("/firestation")
     @ResponseBody
-    public List<Firestation> addFirestation(@RequestBody Firestation newFirestation) throws IOException {
-
-        System.out.println("Before adding " + firestationList);
-        System.out.println("New Firestation is " + newFirestation);
+    public Firestation addFirestation(@RequestBody Firestation newFirestation) throws IOException {
 
         firestationList.add(newFirestation);
-        System.out.println("After adding new firestation " + firestationList);
 
-        return firestationList;
+        return newFirestation;
 
     }
 
-//    @PutMapping("/firestation/put{existingFirestation}")
-//    @ResponseBody
-//    public Firestation replaceFirestation(@PathVariable Firestation existingFirestation, Firestation replacementFirestation) {
-//
-//        return firestationList.set(firestationList.indexOf(existingFirestation), replacementFirestation);
-//
-//    }
-
-    @DeleteMapping("/firestation/{address}")
-    public Firestation deleteFirestation(@PathVariable String address) {
+    @PutMapping("/firestation/{address}")
+    @ResponseBody
+    public ResponseEntity<Object> replaceFirestation(@PathVariable String address, @RequestBody String stationNumber) {
 
         Firestation firestationObject = firestationList.stream().filter(firestation -> address.equals(firestation.getAddress())).findFirst().orElse(null);
-        firestationList.remove(firestationObject);
 
-        return firestationObject;
+        if (firestationObject == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
+        }
+
+        firestationObject.setStation(stationNumber);
+
+        return ResponseEntity.of(Optional.of(firestationObject));
+
     }
 
+    @DeleteMapping("/firestation/{address}")
+    public ResponseEntity<Object> deleteFirestation(@PathVariable String address) {
+
+        Firestation firestationObject = firestationList.stream().filter(firestation -> address.equals(firestation.getAddress())).findFirst().orElse(null);
+
+        if (firestationObject == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
+        }
+
+        firestationList.remove(firestationObject);
+
+        return ResponseEntity.of(Optional.of(firestationObject));
+    }
 
 
 }
+
