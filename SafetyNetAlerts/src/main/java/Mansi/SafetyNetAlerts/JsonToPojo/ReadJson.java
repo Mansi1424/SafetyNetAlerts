@@ -1,6 +1,7 @@
 package Mansi.SafetyNetAlerts.JsonToPojo;
 
 import Mansi.SafetyNetAlerts.Model.Firestation;
+import Mansi.SafetyNetAlerts.Model.Person;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -21,6 +22,7 @@ public class ReadJson {
     public static void main(String[] args) throws IOException {
 //        System.out.println(returnEntireJsonObject());
         System.out.println(returnFirestationsList());
+        System.out.println(returnPersonsList());
     }
 
     public static JsonObject returnEntireJsonObject() throws IOException {
@@ -53,11 +55,21 @@ public class ReadJson {
         JsonElement firestationsObject = returnEntireJsonObject().get("firestations");
         Type type = new TypeToken<List<Firestation>>() {
         }.getType();
+
         List<Firestation> firestations = gson.fromJson(firestationsObject, type);
+
         return firestations;
     }
 
+    public static List<Person> returnPersonsList() throws IOException {
+        JsonElement personsObject = returnEntireJsonObject().get("persons");
+        Type type = new TypeToken<List<Person>>() {
+        }.getType();
 
+        List<Person> persons = gson.fromJson(personsObject, type);
+
+        return persons;
+    }
 
 
 }
