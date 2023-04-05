@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 public class PersonController {
@@ -39,19 +40,48 @@ public class PersonController {
 
     }
 
-    @PutMapping("/person/{phone}")
+    @PutMapping("/person/{firstName}/{lastName}/{phone}")
     @ResponseBody
-    public ResponseEntity<Object> replaceFirestation(@PathVariable String phone, @RequestBody Person address, ) {
+    public ResponseEntity<Object> replaceFirestation(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName,  @PathVariable("phone") String phone, @RequestBody Person personEntered) {
 
-        Firestation firestationObject = firestationList.stream().filter(firestation -> address.equals(firestation.getAddress())).findFirst().orElse(null);
 
-        if (firestationObject == null) {
+        List<Person> filteredStream = personList.stream()
+                .filter(person -> person.getFirstName().equals(firstName))
+                .filter(person -> person.getLastName().equals(lastName))
+                .filter(person -> person.getPhone().equals(phone)).toList();
+
+        if (filteredStream.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
         }
 
-        firestationObject.setStation(stationNumber);
+        Person updatedPerson = filteredStream.get(0);
 
-        return ResponseEntity.of(Optional.of(firestationObject));
+        updatedPerson.setAddress(personEntered.getAddress());
+        updatedPerson.setCity(personEntered.getCity());
+        updatedPerson.setZip(personEntered.getZip());
+        updatedPerson.setPhone(personEntered.getPhone());
+        updatedPerson.setEmail(personEntered.getEmail());
 
+        return ResponseEntity.of(Optional.of(updatedPerson));
+
+    }
+
+    @DeleteMapping("/person/{firstName}/{lastName}/{phone}")
+    public ResponseEntity<Object> deletePerson(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName,  @PathVariable("phone") String phone) {
+
+        List<Person> filteredStream = personList.stream()
+                .filter(person -> person.getFirstName().equals(firstName))
+                .filter(person -> person.getLastName().equals(lastName))
+                .filter(person -> person.getPhone().equals(phone)).toList();
+
+        if (filteredStream.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
+        }
+
+        Person person = filteredStream.get(0);
+
+        personList.remove(person);
+
+        return ResponseEntity.of(Optional.of(person));
     }
 }
