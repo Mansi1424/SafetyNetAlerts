@@ -57,14 +57,18 @@ public class FireStationController {
 
     }
 
-    @DeleteMapping("/firestation/{address}")
-    public ResponseEntity<Object> deleteFirestation(@PathVariable String address) {
+    @DeleteMapping("/firestation/{address}/{station}")
+    public ResponseEntity<Object> deleteFirestation(@PathVariable("address") String address, @PathVariable("station") String station) {
 
-        Firestation firestationObject = firestationList.stream().filter(firestation -> address.equals(firestation.getAddress())).findFirst().orElse(null);
+        List<Firestation> filteredStream = firestationList.stream()
+                .filter(firestation -> firestation.getAddress().equals(address))
+                .filter(firestation -> firestation.getStation().equals(station)).toList();
 
-        if (firestationObject == null) {
+        if (filteredStream.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
         }
+
+        Firestation firestationObject = filteredStream.get(0);
 
         firestationList.remove(firestationObject);
 
