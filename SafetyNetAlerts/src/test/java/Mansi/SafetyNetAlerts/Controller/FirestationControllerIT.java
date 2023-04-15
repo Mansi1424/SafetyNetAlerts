@@ -82,15 +82,16 @@ public class FirestationControllerIT {
     @Test
     public void testPutFirestation() throws Exception {
         String address = "951 LoneTree Rd";
-        HttpEntity<String> station = new HttpEntity<String>("8");
+        String stationNumber = "8";
+        HttpEntity<String> station = new HttpEntity<String>(stationNumber);
         ResponseEntity<Firestation> responseEntity =
                 this.restTemplate.exchange(
-                        "http://localhost:" + port + "/firestation/" + address,
+                        "http://localhost:" + port + "/firestation/" + address + "/" + stationNumber,
                         HttpMethod.PUT,
                         station,
                         Firestation.class
                 );
-        Assertions.assertEquals(responseEntity.getStatusCode(), HttpStatus.OK);
+        Assertions.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
 
         Firestation updatedFirestation = responseEntity.getBody();
 
