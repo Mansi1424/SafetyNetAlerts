@@ -40,15 +40,14 @@ public class PersonController {
 
     }
 
-    @PutMapping("/person/{firstName}/{lastName}/{phone}")
+    @PutMapping("/person/{firstName}/{lastName}")
     @ResponseBody
-    public ResponseEntity<Object> replaceFirestation(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName,  @PathVariable("phone") String phone, @RequestBody Person personEntered) {
+    public ResponseEntity<Object> replaceFirestation(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName, @RequestBody Person personEntered) {
 
 
         List<Person> filteredStream = personList.stream()
                 .filter(person -> person.getFirstName().equals(firstName))
-                .filter(person -> person.getLastName().equals(lastName))
-                .filter(person -> person.getPhone().equals(phone)).toList();
+                .filter(person -> person.getLastName().equals(lastName)).toList();
 
         if (filteredStream.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
@@ -66,13 +65,12 @@ public class PersonController {
 
     }
 
-    @DeleteMapping("/person/{firstName}/{lastName}/{phone}")
-    public ResponseEntity<Object> deletePerson(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName,  @PathVariable("phone") String phone) {
+    @DeleteMapping("/person/{firstName}/{lastName}")
+    public ResponseEntity<Object> deletePerson(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
 
         List<Person> filteredStream = personList.stream()
                 .filter(person -> person.getFirstName().equals(firstName))
-                .filter(person -> person.getLastName().equals(lastName))
-                .filter(person -> person.getPhone().equals(phone)).toList();
+                .filter(person -> person.getLastName().equals(lastName)).toList();
 
         if (filteredStream.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
