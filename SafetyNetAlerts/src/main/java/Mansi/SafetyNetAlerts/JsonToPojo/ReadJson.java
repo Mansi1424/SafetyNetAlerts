@@ -1,6 +1,7 @@
 package Mansi.SafetyNetAlerts.JsonToPojo;
 
 import Mansi.SafetyNetAlerts.Model.Firestation;
+import Mansi.SafetyNetAlerts.Model.MedicalRecord;
 import Mansi.SafetyNetAlerts.Model.Person;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -16,13 +17,20 @@ import java.net.URL;
 import java.util.List;
 
 public class ReadJson {
-
     private static final Gson gson = new Gson();
+    private static JsonObject entireFile;
+
+    static {
+        try {
+            entireFile = returnEntireJsonObject();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static void main(String[] args) throws IOException {
 //        System.out.println(returnEntireJsonObject());
-        System.out.println(returnFirestationsList());
-        System.out.println(returnPersonsList());
+        returnFirestationsList();
     }
 
     public static JsonObject returnEntireJsonObject() throws IOException {
@@ -52,7 +60,7 @@ public class ReadJson {
     }
 
     public static List<Firestation> returnFirestationsList() throws IOException {
-        JsonElement firestationsObject = returnEntireJsonObject().get("firestations");
+        JsonElement firestationsObject = entireFile.get("firestations");
         Type type = new TypeToken<List<Firestation>>() {
         }.getType();
 
@@ -62,7 +70,7 @@ public class ReadJson {
     }
 
     public static List<Person> returnPersonsList() throws IOException {
-        JsonElement personsObject = returnEntireJsonObject().get("persons");
+        JsonElement personsObject = entireFile.get("persons");
         Type type = new TypeToken<List<Person>>() {
         }.getType();
 
@@ -70,6 +78,17 @@ public class ReadJson {
 
         return persons;
     }
+
+    public static List<MedicalRecord> returnMedicalRecordsList() throws IOException {
+        JsonElement medicalRecordsObject = entireFile.get("medicalrecords");
+        Type type = new TypeToken<List<MedicalRecord>>() {
+        }.getType();
+
+        List<MedicalRecord> medicalRecords = gson.fromJson(medicalRecordsObject, type);
+
+        return medicalRecords;
+    }
+
 
 
 }
