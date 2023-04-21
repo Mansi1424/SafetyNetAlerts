@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Handle Firestation Endpoints
+ */
 @RestController
 public class FireStationController {
 
@@ -30,7 +33,12 @@ public class FireStationController {
 
     }
 
-
+    /**
+     * Post new Firestation
+     * @param newFirestation
+     * @return
+     * @throws IOException
+     */
     @PostMapping("/firestation")
     @ResponseBody
     public Firestation addFirestation(@RequestBody Firestation newFirestation) throws IOException {
@@ -41,15 +49,27 @@ public class FireStationController {
 
     }
 
-    @PutMapping("/firestation/{address}")
+    /**
+     * Update firestation station
+     *
+     * @param address address firestation serves
+     * @param stationNumber number of firestation
+     * @return firestation
+     */
+    @PutMapping("/firestation/{address}/{station}")
     @ResponseBody
-    public ResponseEntity<Object> replaceFirestation(@PathVariable String address, @RequestBody String stationNumber) {
+    public ResponseEntity<Object> replaceFirestation(@PathVariable("address") String address, @PathVariable("station") String station, @RequestBody String stationNumber) {
 
-        Firestation firestationObject = firestationList.stream().filter(firestation -> address.equals(firestation.getAddress())).findFirst().orElse(null);
 
-        if (firestationObject == null) {
+        List<Firestation> filteredStream = firestationList.stream()
+                .filter(firestation -> firestation.getAddress().contains(address))
+                .filter(firestation -> firestation.getStation().equals(station)).toList();
+
+        if (filteredStream.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
         }
+
+        Firestation firestationObject = filteredStream.get(0);
 
         firestationObject.setStation(stationNumber);
 
@@ -61,7 +81,7 @@ public class FireStationController {
     public ResponseEntity<Object> deleteFirestation(@PathVariable("address") String address, @PathVariable("station") String station) {
 
         List<Firestation> filteredStream = firestationList.stream()
-                .filter(firestation -> firestation.getAddress().equals(address))
+                .filter(firestation -> firestation.getAddress().contains(address))
                 .filter(firestation -> firestation.getStation().equals(station)).toList();
 
         if (filteredStream.isEmpty()) {
