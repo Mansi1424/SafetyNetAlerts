@@ -81,9 +81,9 @@ public class FirestationControllerIT {
 
     @Test
     public void testPutFirestation() throws Exception {
-        String address = "951 LoneTree Rd";
-        String stationNumber = "8";
-        HttpEntity<String> station = new HttpEntity<String>(stationNumber);
+        String address = "1509 Culver St";
+        String stationNumber = "3";
+        HttpEntity<String> station = new HttpEntity<String>("8");
         ResponseEntity<Firestation> responseEntity =
                 this.restTemplate.exchange(
                         "http://localhost:" + port + "/firestation/" + address + "/" + stationNumber,
