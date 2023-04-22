@@ -83,7 +83,7 @@ public class PersonControllerIT {
         String firstName = "John";
         String lastName = "Boyd";
         HttpEntity<Person> request = new HttpEntity<Person>(new Person("Mansi", "Patel",
-                "6007 Magnolia Lane", "Tampa", "33510", "813-461-2500"));;
+                "6007 Magnolia Lane", "Tampa", "33510", "813-461-2500"));
         ResponseEntity<Person> responseEntity =
                 this.restTemplate.exchange(
                         "http://localhost:" + port + "/person/" + firstName + "/" + lastName,
