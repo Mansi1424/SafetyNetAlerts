@@ -61,14 +61,16 @@ public class MedicalRecordControllerIT {
 
     @Test
     public void testPostMedicalRecords() throws Exception {
-        List<String> medications = new ArrayList<String>() {{
-            add("Tylenol");
-            add("Metformin");
-        } };
-        List<String> allergies = new ArrayList<String>() {{
-            add("Pollen");
-            add("Bees");
-        } };
+        List<String> medications = new ArrayList<String>() {
+            {
+                add("Tylenol");
+                add("Metformin");
+            } };
+        List<String> allergies = new ArrayList<String>() {
+            {
+                add("Pollen");
+                add("Bees");
+            } };
         HttpEntity<MedicalRecord> request = new HttpEntity<>(new MedicalRecord("John", "Cook", "02/20/1990", medications, allergies));
         ResponseEntity<MedicalRecord> responseEntity =
                 this.restTemplate.exchange(
@@ -92,14 +94,16 @@ public class MedicalRecordControllerIT {
     public void testPutMedicalRecord() throws Exception {
         String firstName = "John";
         String lastName = "Boyd";
-        List<String> medications = new ArrayList<String>() {{
-            add("Tylenol:100mg");
-            add("Metformin:500mg");
-        } };
-        List<String> allergies = new ArrayList<String>() {{
-            add("Pollen");
-            add("Bees");
-        } };
+        List<String> medications = new ArrayList<String>() {
+            {
+                add("Tylenol:100mg");
+                add("Metformin:500mg");
+            } };
+        List<String> allergies = new ArrayList<String>() {
+            {
+                add("Pollen");
+                add("Bees");
+            } };
         HttpEntity<MedicalRecord> request = new HttpEntity<>(new MedicalRecord("John", "Cook", "02/20/1990", medications, allergies));
         ResponseEntity<MedicalRecord> responseEntity =
                 this.restTemplate.exchange(

@@ -20,7 +20,7 @@ public class MedicalRecordController {
 
     private final List<MedicalRecord> medicalRecordsList;
 
-    private static Logger logger = LoggerFactory.getLogger(MedicalRecordController.class);
+    private static final Logger logger = LoggerFactory.getLogger(MedicalRecordController.class);
 
 
 
@@ -35,11 +35,11 @@ public class MedicalRecordController {
 
     /**
      * Get all medical records
-     * @return
-     * @throws IOException
+     *
+     * @return medical records
      */
     @GetMapping("/medicalRecord")
-    public List<MedicalRecord> getMedicalRecords() throws IOException {
+    public List<MedicalRecord> getMedicalRecords() {
 
         logger.info("HTTP GET request received at /medicalRecord URL");
 
@@ -52,13 +52,13 @@ public class MedicalRecordController {
 
     /**
      * Post new MedicalRecord
-     * @param newMedicalRecord
-     * @return
-     * @throws IOException
+     *
+     * @param newMedicalRecord medical record to be added
+     * @return added medical record
      */
     @PostMapping("/medicalRecord")
     @ResponseBody
-    public MedicalRecord addMedicalRecord(@RequestBody MedicalRecord newMedicalRecord) throws IOException {
+    public MedicalRecord addMedicalRecord(@RequestBody MedicalRecord newMedicalRecord) {
 
         logger.info("HTTP POST request received at /medicalRecord URL");
 
@@ -72,6 +72,7 @@ public class MedicalRecordController {
 
     /**
      * Update MedicalRecord
+     *
      * @param firstName
      * @param lastName
      * @param record
