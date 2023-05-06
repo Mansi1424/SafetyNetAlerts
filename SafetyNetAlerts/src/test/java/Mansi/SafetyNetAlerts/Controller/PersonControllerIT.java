@@ -1,6 +1,5 @@
 package Mansi.SafetyNetAlerts.Controller;
 
-import Mansi.SafetyNetAlerts.Model.Firestation;
 import Mansi.SafetyNetAlerts.Model.Person;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -59,7 +58,7 @@ public class PersonControllerIT {
     @Test
     public void testPostPerson() throws Exception {
         HttpEntity<Person> request = new HttpEntity<>(new Person("Mansi", "Patel",
-                "6007 Magnolia Lane", "Tampa", "33510", "813-461-2500"));
+                "6007 Magnolia Lane", "Tampa", "33510", "813-461-2500", "mansi2001.edu@gmail.com"));
 
         ResponseEntity<Person> responseEntity =
                 this.restTemplate.exchange(
@@ -83,7 +82,7 @@ public class PersonControllerIT {
         String firstName = "John";
         String lastName = "Boyd";
         HttpEntity<Person> request = new HttpEntity<Person>(new Person("Mansi", "Patel",
-                "6007 Magnolia Lane", "Tampa", "33510", "813-461-2500"));
+                "6007 Magnolia Lane", "Tampa", "33510", "813-461-2500", "mansi2001.edu@gmail.com"));
         ResponseEntity<Person> responseEntity =
                 this.restTemplate.exchange(
                         "http://localhost:" + port + "/person/" + firstName + "/" + lastName,

@@ -2,9 +2,7 @@ package Mansi.SafetyNetAlerts.Controller;
 
 import Mansi.SafetyNetAlerts.JsonToPojo.EmptyJsonBody;
 import Mansi.SafetyNetAlerts.JsonToPojo.ReadJson;
-import Mansi.SafetyNetAlerts.Model.Firestation;
 import Mansi.SafetyNetAlerts.Model.MedicalRecord;
-import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

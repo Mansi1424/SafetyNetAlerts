@@ -1,0 +1,44 @@
+{
+  "people": [
+    {
+      "firstName": "Brian",
+      "lastName": "Stelzer",
+      "address": "947 E. Rose Dr",
+      "phoneNum": "841-874-7784"
+    },
+    {
+      "firstName": "Jamie",
+      "lastName": "Peters",
+      "address": "908 73rd St",
+      "phoneNum": "841-874-7462"
+    },
+    {
+      "firstName": "Shawna",
+      "lastName": "Stelzer",
+      "address": "947 E. Rose Dr",
+      "phoneNum": "841-874-7784"
+    },
+    {
+      "firstName": "Reginold",
+      "lastName": "Walker",
+      "address": "908 73rd St",
+      "phoneNum": "841-874-8547"
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Duncan",
+      "address": "644 Gershwin Cir",
+      "phoneNum": "841-874-6512"
+    },
+    {
+      "firstName": "Kendrik",
+      "lastName": "Stelzer",
+      "address": "947 E. Rose Dr",
+      "phoneNum": "841-874-7784"
+    },
+    {
+      "children": 1,
+      "adults": 5
+    }
+  ]
+}

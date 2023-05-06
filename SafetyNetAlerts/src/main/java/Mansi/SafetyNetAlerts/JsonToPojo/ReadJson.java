@@ -9,6 +9,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -87,6 +88,17 @@ public class ReadJson {
         List<MedicalRecord> medicalRecords = gson.fromJson(medicalRecordsObject, type);
 
         return medicalRecords;
+    }
+
+    public static String readJsonFile(String filePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        StringBuilder stringBuilder = new StringBuilder();
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            stringBuilder.append(line);
+        }
+        reader.close();
+        return stringBuilder.toString();
     }
 
 
