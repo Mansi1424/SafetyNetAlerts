@@ -1,6 +1,6 @@
-package Mansi.SafetyNetAlerts.helper;
+package mansi.safetynetalerts.helper;
 
-import Mansi.SafetyNetAlerts.Model.Person;
+import mansi.safetynetalerts.model.Person;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

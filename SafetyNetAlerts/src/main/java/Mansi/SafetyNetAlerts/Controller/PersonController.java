@@ -1,8 +1,8 @@
-package Mansi.SafetyNetAlerts.Controller;
+package mansi.safetynetalerts.controller;
 
-import Mansi.SafetyNetAlerts.JsonToPojo.EmptyJsonBody;
-import Mansi.SafetyNetAlerts.JsonToPojo.ReadJson;
-import Mansi.SafetyNetAlerts.Model.Person;
+import mansi.safetynetalerts.jsontopojo.EmptyJsonBody;
+import mansi.safetynetalerts.jsontopojo.ReadJson;
+import mansi.safetynetalerts.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
