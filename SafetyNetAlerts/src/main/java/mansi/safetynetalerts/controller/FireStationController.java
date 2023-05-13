@@ -1,14 +1,14 @@
 package mansi.safetynetalerts.controller;
 
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import mansi.safetynetalerts.helper.FirestationMethods;
 import mansi.safetynetalerts.jsontopojo.EmptyJsonBody;
 import mansi.safetynetalerts.jsontopojo.ReadJson;
 import mansi.safetynetalerts.model.Firestation;
 import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
 public class FireStationController {
 
 
-    private List<Firestation> firestationList = ReadJson.returnFirestationsList();
+    private List<Firestation> firestationList;
     private final List<Person> personList = ReadJson.returnPersonsList();
     private final List<MedicalRecord> medicalRecordList = ReadJson.returnMedicalRecordsList();
 
@@ -44,11 +44,11 @@ public class FireStationController {
      * Get all firestations
      */
     @GetMapping("/firestation")
-    public List<Firestation> getFirestations()  {
+    public List<Firestation> getFirestations() {
 
         logger.info("HTTP GET request received at /firestation URL");
 
-        logger.info("Firestations List = " +  firestationList);
+        logger.info("Firestations List = " + firestationList);
 
         return firestationList;
 
@@ -56,6 +56,7 @@ public class FireStationController {
 
     /**
      * Post new Firestation
+     *
      * @param newFirestation newFirestation
      */
     @PostMapping("/firestation")
@@ -74,7 +75,7 @@ public class FireStationController {
     /**
      * Update firestation station
      *
-     * @param address address firestation serves
+     * @param address       address firestation serves
      * @param stationNumber number of firestation
      * @return firestation
      */
@@ -103,6 +104,7 @@ public class FireStationController {
 
     /**
      * Delete Firestation
+     *
      * @param address firestationAddress
      * @param station firestationStationNumber
      * @return deleted firestation
@@ -126,7 +128,7 @@ public class FireStationController {
 
         ResponseEntity<Object> response = ResponseEntity.of(Optional.of(firestationObject));
 
-        logger.info("deleted Firestation = " +  response);
+        logger.info("deleted Firestation = " + response);
 
         return response;
     }
@@ -146,12 +148,12 @@ public class FireStationController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
         }
 
-        //Find list of people associated to the stationNumber
+        //Find list of people associated to the stationNumber by matching address
         List<Person> matchingPersons = new ArrayList<>();
         for (Firestation firestation : filteredStream) {
             String stationAddress = firestation.getAddress();
             for (Person person : personList) {
-                if (Objects.equals(person.getAddress(), stationAddress) && !FirestationMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
+                if (Objects.equals(person.getAddress(), stationAddress) && FirestationMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
                     Person matchedPerson = new Person(person.getFirstName(), person.getLastName(), person.getAddress(), person.getPhone());
                     matchingPersons.add(matchedPerson);
 

@@ -30,9 +30,9 @@ public class FirestationMethods {
     public static boolean containsPersonWithName(List<Person> list, String name) {
         for (Person person : list) {
             if (person.getFirstName().equals(name)) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }

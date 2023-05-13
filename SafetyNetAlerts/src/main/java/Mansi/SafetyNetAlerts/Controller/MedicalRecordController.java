@@ -22,14 +22,9 @@ public class MedicalRecordController {
     private static final Logger logger = LoggerFactory.getLogger(MedicalRecordController.class);
 
 
-
-
-
     public MedicalRecordController(List<MedicalRecord> medicalRecordsList) throws IOException {
         this.medicalRecordsList = ReadJson.returnMedicalRecordsList();
     }
-
-
 
 
     /**
@@ -42,7 +37,7 @@ public class MedicalRecordController {
 
         logger.info("HTTP GET request received at /medicalRecord URL");
 
-        logger.info("MedicalRecords List = " +  medicalRecordsList);
+        logger.info("MedicalRecords List = " + medicalRecordsList);
 
         return medicalRecordsList;
 
@@ -107,6 +102,7 @@ public class MedicalRecordController {
 
     /**
      * Delete Medical Record
+     *
      * @param firstName
      * @param lastName
      * @return
@@ -134,9 +130,6 @@ public class MedicalRecordController {
 
         return ResponseEntity.of(Optional.of(medicalRecordObject));
     }
-
-
-
 
 
 }
