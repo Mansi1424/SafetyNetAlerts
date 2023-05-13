@@ -6,6 +6,7 @@ import mansi.safetynetalerts.jsontopojo.ReadJson;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -13,8 +14,13 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+
 @WebMvcTest(AlertController.class)
+@Import(ReadJson.class)
 public class AlertControllerTest {
+
+    @Autowired
+    private ReadJson readJson;
 
     @Autowired
     private MockMvc mockMvc;
@@ -36,7 +42,7 @@ public class AlertControllerTest {
 
     @Test
     public void testGetChildAlertURLReturnsResponse() throws Exception {
-        String expectedResult = ReadJson.readJsonFile("src/test/resources/GetChildAlertTestResult.json");
+        String expectedResult = readJson.readJsonFile("src/test/resources/GetChildAlertTestResult.json");
         String address = "947 E. Rose Dr";
         mockMvc.perform(MockMvcRequestBuilders.get("/childAlert/{address}", address)
                         .accept(MediaType.APPLICATION_JSON))

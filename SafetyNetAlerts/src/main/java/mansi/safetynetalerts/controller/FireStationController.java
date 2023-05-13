@@ -11,6 +11,7 @@ import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,16 +28,19 @@ import java.util.stream.Collectors;
 public class FireStationController {
 
 
-    private List<Firestation> firestationList;
-    private final List<Person> personList = ReadJson.returnPersonsList();
-    private final List<MedicalRecord> medicalRecordList = ReadJson.returnMedicalRecordsList();
+    @Autowired
+    private ReadJson readJson;
+
+    private final List<Firestation> firestationList;
+    private final List<Person> personList = readJson.returnPersonsList();
+    private final List<MedicalRecord> medicalRecordList = readJson.returnMedicalRecordsList();
 
 
-    private static Logger logger = LoggerFactory.getLogger(FireStationController.class);
+    private static final Logger logger = LoggerFactory.getLogger(FireStationController.class);
 
     public FireStationController(List<Firestation> firestationList) throws IOException {
 
-        this.firestationList = ReadJson.returnFirestationsList();
+        this.firestationList = readJson.returnFirestationsList();
     }
 
 

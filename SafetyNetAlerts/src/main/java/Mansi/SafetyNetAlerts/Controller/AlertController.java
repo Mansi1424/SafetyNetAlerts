@@ -9,6 +9,7 @@ import mansi.safetynetalerts.jsontopojo.ReadJson;
 import mansi.safetynetalerts.model.Firestation;
 import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,9 +25,12 @@ import java.util.stream.Collectors;
 @RestController
 public class AlertController {
 
-    private final List<Person> personList = ReadJson.returnPersonsList();
-    private final List<MedicalRecord> medicalRecordList = ReadJson.returnMedicalRecordsList();
-    private List<Firestation> firestationList = ReadJson.returnFirestationsList();
+    @Autowired
+    private ReadJson readJson;
+
+    private final List<Person> personList = readJson.returnPersonsList();
+    private final List<MedicalRecord> medicalRecordList = readJson.returnMedicalRecordsList();
+    private final List<Firestation> firestationList = readJson.returnFirestationsList();
 
     public AlertController() throws IOException {
     }
