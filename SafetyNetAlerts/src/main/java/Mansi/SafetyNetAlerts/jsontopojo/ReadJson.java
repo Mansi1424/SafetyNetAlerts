@@ -1,15 +1,15 @@
 package mansi.safetynetalerts.jsontopojo;
 
-import mansi.safetynetalerts.model.Firestation;
-import mansi.safetynetalerts.model.MedicalRecord;
-import mansi.safetynetalerts.model.Person;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+import mansi.safetynetalerts.model.Firestation;
+import mansi.safetynetalerts.model.MedicalRecord;
+import mansi.safetynetalerts.model.Person;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -17,6 +17,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 
+
+@Component
 public class ReadJson {
     private static final Gson gson = new Gson();
     private static JsonObject entireFile;
@@ -90,38 +92,4 @@ public class ReadJson {
         return medicalRecords;
     }
 
-    public static String readJsonFile(String filePath) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(filePath));
-        StringBuilder stringBuilder = new StringBuilder();
-        String line = null;
-        while ((line = reader.readLine()) != null) {
-            stringBuilder.append(line);
-        }
-        reader.close();
-        return stringBuilder.toString();
-    }
-
-
-
 }
-
-//        File file = new File("./SafetyNetAlerts/src/main/resources");
-//        for (String fileNames : file.list()) System.out.println(fileNames);
-
-//    import static com.jsoniter.JsonIterator.parse;
-//    var rawData = Files.readAllBytes(new File(PATH_DATA).toPath());
-//    var any = parse(rawData).readAny();
-
-//    any.get(KEY_PERSONS).forEach(p -> people.add( //
-//            Person.builder() //
-//            .firstName(p.get(KEY_FIRST_NAME).toString()) //
-//            .lastName(p.get(KEY_LAST_NAME).toString()) //
-//            .address(p.get(KEY_ADDRESS).toString()) //
-//            .city(p.get(KEY_CITY).toString()) //
-//            .zip(p.get(KEY_ZIP).toString()) //
-//            .phone(p.get(KEY_PHONE).toString()) //
-//            .email(p.get(KEY_EMAIL).toString()) //
-//            .build() //
-//        ));
-
-

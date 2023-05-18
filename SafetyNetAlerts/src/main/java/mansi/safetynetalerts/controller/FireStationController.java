@@ -3,7 +3,7 @@ package mansi.safetynetalerts.controller;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import mansi.safetynetalerts.helper.FirestationMethods;
+import mansi.safetynetalerts.helper.HelperMethods;
 import mansi.safetynetalerts.jsontopojo.EmptyJsonBody;
 import mansi.safetynetalerts.jsontopojo.ReadJson;
 import mansi.safetynetalerts.model.Firestation;
@@ -27,23 +27,25 @@ import java.util.stream.Collectors;
 public class FireStationController {
 
 
-    private List<Firestation> firestationList;
-    private final List<Person> personList = ReadJson.returnPersonsList();
-    private final List<MedicalRecord> medicalRecordList = ReadJson.returnMedicalRecordsList();
+    private final List<Firestation> firestationList;
+    private final List<Person> personList;
+    private final List<MedicalRecord> medicalRecordList;
 
 
-    private static Logger logger = LoggerFactory.getLogger(FireStationController.class);
+    private static final Logger logger = LoggerFactory.getLogger(FireStationController.class);
 
-    public FireStationController(List<Firestation> firestationList) throws IOException {
+    public FireStationController(ReadJson readJson) throws IOException {
 
         this.firestationList = ReadJson.returnFirestationsList();
+        this.personList = ReadJson.returnPersonsList();
+        this.medicalRecordList = ReadJson.returnMedicalRecordsList();
     }
 
 
     /**
      * Get all firestations
      */
-    @GetMapping("/firestation")
+    @GetMapping("/allFirestation")
     public List<Firestation> getFirestations() {
 
         logger.info("HTTP GET request received at /firestation URL");
@@ -133,9 +135,9 @@ public class FireStationController {
         return response;
     }
 
-    @GetMapping("/firestation/{stationNumber}")
+    @GetMapping("/firestation")
     @ResponseBody
-    public ResponseEntity<Object> getPerson(@PathVariable("stationNumber") String stationNumber) throws ParseException {
+    public ResponseEntity<Object> getPerson(@RequestParam String stationNumber) throws ParseException {
 
         JsonObject responseJsonObject = new JsonObject();
 
@@ -153,7 +155,7 @@ public class FireStationController {
         for (Firestation firestation : filteredStream) {
             String stationAddress = firestation.getAddress();
             for (Person person : personList) {
-                if (Objects.equals(person.getAddress(), stationAddress) && FirestationMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
+                if (Objects.equals(person.getAddress(), stationAddress) && HelperMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
                     Person matchedPerson = new Person(person.getFirstName(), person.getLastName(), person.getAddress(), person.getPhone());
                     matchingPersons.add(matchedPerson);
 
@@ -169,7 +171,7 @@ public class FireStationController {
             for (MedicalRecord medicalRecord : medicalRecordList) {
                 if (Objects.equals(medicalRecord.getFirstName(), matchedPerson.getFirstName())) {
                     String personDob = medicalRecord.getBirthdate();
-                    age = FirestationMethods.getAge(personDob);
+                    age = HelperMethods.getAge(personDob);
 
                     if (age < 18) {
                         children++;

@@ -22,7 +22,7 @@ public class MedicalRecordController {
     private static final Logger logger = LoggerFactory.getLogger(MedicalRecordController.class);
 
 
-    public MedicalRecordController(List<MedicalRecord> medicalRecordsList) throws IOException {
+    public MedicalRecordController(ReadJson readJson) throws IOException {
         this.medicalRecordsList = ReadJson.returnMedicalRecordsList();
     }
 

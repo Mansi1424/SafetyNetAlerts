@@ -21,16 +21,15 @@ public class PersonController {
     private static Logger logger = LoggerFactory.getLogger(PersonController.class);
 
 
-    public PersonController(List<Person> personsList) throws IOException {
+    public PersonController(ReadJson readJson) throws IOException {
 
         this.personList = ReadJson.returnPersonsList();
     }
 
 
-
-
     /**
      * Get Persons List
+     *
      * @return
      * @throws IOException
      */
@@ -39,7 +38,7 @@ public class PersonController {
 
         logger.info("HTTP GET request received at /person URL");
 
-        logger.info("Person List = " +  personList);
+        logger.info("Person List = " + personList);
 
         return personList;
 
@@ -48,6 +47,7 @@ public class PersonController {
 
     /**
      * Delete a Person
+     *
      * @param newPerson
      * @return
      * @throws IOException
@@ -69,6 +69,7 @@ public class PersonController {
 
     /**
      * Update a person's info
+     *
      * @param firstName
      * @param lastName
      * @param personEntered
@@ -105,6 +106,7 @@ public class PersonController {
 
     /**
      * Delete a Person
+     *
      * @param firstName
      * @param lastName
      * @return

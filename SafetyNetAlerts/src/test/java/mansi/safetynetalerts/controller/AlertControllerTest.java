@@ -1,15 +1,17 @@
 package mansi.safetynetalerts.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mansi.safetynetalerts.helper.ReadJsonFileForTests;
 import mansi.safetynetalerts.jsontopojo.EmptyJsonBody;
 import mansi.safetynetalerts.jsontopojo.ReadJson;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -23,12 +25,17 @@ public class AlertControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
+    @MockBean
+    ReadJson readJson;
+
+
+
     @Test
     public void testGetChildAlertURLReturns404EmptyJsonWhenNoChildren() throws Exception {
         EmptyJsonBody empty = new EmptyJsonBody();
         String emptyBody = empty.toString();
-        String stationNum = "112 Steppes Pl";
-        mockMvc.perform(MockMvcRequestBuilders.get("/childAlert/{address}", stationNum)
+        String address = "112 Steppes Pl";
+        mockMvc.perform(get("/childAlert").param("address", address)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound());
 
@@ -36,9 +43,9 @@ public class AlertControllerTest {
 
     @Test
     public void testGetChildAlertURLReturnsResponse() throws Exception {
-        String expectedResult = ReadJson.readJsonFile("src/test/resources/GetChildAlertTestResult.json");
+        String expectedResult = ReadJsonFileForTests.readJsonFile("src/test/resources/GetChildAlertTestResult.json");
         String address = "947 E. Rose Dr";
-        mockMvc.perform(MockMvcRequestBuilders.get("/childAlert/{address}", address)
+        mockMvc.perform(get("/childAlert").param("address", address)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json(expectedResult));

@@ -1,6 +1,7 @@
 package mansi.safetynetalerts.controller;
 
 
+import mansi.safetynetalerts.jsontopojo.ReadJson;
 import mansi.safetynetalerts.model.Firestation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -28,14 +29,17 @@ public class FirestationControllerIT {
     @Autowired
     private TestRestTemplate restTemplate;
 
+    @Autowired
+    ReadJson readJson;
+
     @Test
     public void testGetFirestationsIsNotNull() throws Exception {
         ResponseEntity<List<Firestation>> responseEntity =
                 this.restTemplate.exchange(
-                        "http://localhost:" + port + "/firestation",
+                        "http://localhost:" + port + "/allFirestation",
                         HttpMethod.GET,
                         null,
-                        new ParameterizedTypeReference<List<Firestation>>() {
+                        new ParameterizedTypeReference<>() {
                         }
                 );
         List<Firestation> firestations = responseEntity.getBody();
@@ -47,10 +51,10 @@ public class FirestationControllerIT {
     public void testGetFirestationsHasSize() throws Exception {
         ResponseEntity<List<Firestation>> responseEntity =
                 this.restTemplate.exchange(
-                        "http://localhost:" + port + "/firestation",
+                        "http://localhost:" + port + "/allFirestation",
                         HttpMethod.GET,
                         null,
-                        new ParameterizedTypeReference<List<Firestation>>() {
+                        new ParameterizedTypeReference<>() {
                         }
                 );
         List<Firestation> firestations = responseEntity.getBody();

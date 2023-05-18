@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class FirestationMethods {
+public class HelperMethods {
 
     public static int getAge(String Stringdob) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
