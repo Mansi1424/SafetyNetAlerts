@@ -26,7 +26,7 @@ public class MedicalRecordController {
 
 
     public MedicalRecordController(ReadJson readJson) throws IOException {
-        this.medicalRecordsList = ReadJson.returnMedicalRecordsList();
+        this.medicalRecordsList = readJson.returnMedicalRecordsList();
     }
 
 

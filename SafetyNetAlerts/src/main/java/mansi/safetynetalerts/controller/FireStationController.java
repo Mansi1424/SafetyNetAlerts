@@ -36,9 +36,9 @@ public class FireStationController {
 
     public FireStationController(ReadJson readJson) throws IOException {
 
-        this.firestationList = ReadJson.returnFirestationsList();
-        this.personList = ReadJson.returnPersonsList();
-        this.medicalRecordList = ReadJson.returnMedicalRecordsList();
+        this.firestationList = readJson.returnFirestationsList();
+        this.personList = readJson.returnPersonsList();
+        this.medicalRecordList = readJson.returnMedicalRecordsList();
     }
 
 
@@ -77,7 +77,7 @@ public class FireStationController {
     /**
      * Update firestation station
      *
-     * @param address address firestation serves
+     * @param address       address firestation serves
      * @param stationNumber number of firestation
      * @return firestation
      */
@@ -146,6 +146,7 @@ public class FireStationController {
     @ResponseBody
     public ResponseEntity<Object> getPerson(@RequestParam String stationNumber) throws ParseException {
 
+        logger.info("HTTP GET request received at /firestation URL");
         JsonObject responseJsonObject = new JsonObject();
 
         List<Firestation> filteredStream = firestationList.stream()
@@ -213,6 +214,8 @@ public class FireStationController {
         summary.addProperty("adults", adults);
         filteredPersonList.add(summary);
 
+        logger.info("Person List" + filteredPersonList);
+
         // Turn list of persons to JsonArray to be a part of a JsonObject
         JsonArray personArray = new JsonArray();
         for (JsonObject person : filteredPersonList) {
@@ -234,6 +237,8 @@ public class FireStationController {
     @ResponseBody
     public ResponseEntity<Object> getFire(@RequestParam String address) throws ParseException {
         JsonObject responseJsonObject = new JsonObject();
+
+        logger.info("HTTP GET request received at /fire URL");
 
         List<Firestation> filteredStream = firestationList.stream()
                 .filter(firestation -> firestation.getAddress().equals(address)).toList();
@@ -264,9 +269,9 @@ public class FireStationController {
         List<JsonObject> filteredPersonList = new ArrayList<>();
 
         // Add stationNumber to list of Persons Objects
-        JsonObject stationNumber = new JsonObject();
-        stationNumber.addProperty("stationNum", filteredStream.get(0).getStation());
-        filteredPersonList.add(stationNumber);
+//        JsonObject stationNumber = new JsonObject();
+        responseJsonObject.addProperty("stationNum", filteredStream.get(0).getStation());
+//        filteredPersonList.add(stationNumber);
 
         // Loop through map and get wanted fields in PersonObject then save to filteredPersonList
         for (Map.Entry<String, Person> entry : peopleMap.entrySet()) {
@@ -296,7 +301,7 @@ public class FireStationController {
             filteredPersonList.add(personJson);
         }
 
-
+        logger.info("Person List" + filteredPersonList);
 
         // Turn list of persons to JsonArray to be a part of a JsonObject
         JsonArray personArray = new JsonArray();
@@ -314,7 +319,7 @@ public class FireStationController {
      * Method used by /fire url to get MedRecord by first/lastName
      *
      * @param firstName firstNameOfPerson
-     * @param lastName lastNameOfPerson
+     * @param lastName  lastNameOfPerson
      * @return MedicalRecord MedicalRecordOfPerson
      */
     public MedicalRecord findRecordByName(String firstName, String lastName) throws ParseException {

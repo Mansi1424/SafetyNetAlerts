@@ -20,10 +20,10 @@ import java.util.List;
 
 @Component
 public class ReadJson {
-    private static final Gson gson = new Gson();
-    private static JsonObject entireFile;
+    private final Gson gson = new Gson();
+    private final JsonObject entireFile;
 
-    static {
+    public ReadJson() {
         try {
             entireFile = returnEntireJsonObject();
         } catch (IOException e) {
@@ -31,12 +31,12 @@ public class ReadJson {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public void main(String[] args) throws IOException {
 //        System.out.println(returnEntireJsonObject());
         returnFirestationsList();
     }
 
-    public static JsonObject returnEntireJsonObject() throws IOException {
+    public JsonObject returnEntireJsonObject() throws IOException {
         String url = "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/DA+Java+EN/P5+/data.json";
         List<String> dataArray;
 
@@ -62,7 +62,7 @@ public class ReadJson {
         return body;
     }
 
-    public static List<Firestation> returnFirestationsList() throws IOException {
+    public List<Firestation> returnFirestationsList() throws IOException {
         JsonElement firestationsObject = entireFile.get("firestations");
         Type type = new TypeToken<List<Firestation>>() {
         }.getType();
@@ -72,7 +72,7 @@ public class ReadJson {
         return firestations;
     }
 
-    public static List<Person> returnPersonsList() throws IOException {
+    public List<Person> returnPersonsList() throws IOException {
         JsonElement personsObject = entireFile.get("persons");
         Type type = new TypeToken<List<Person>>() {
         }.getType();
@@ -82,7 +82,7 @@ public class ReadJson {
         return persons;
     }
 
-    public static List<MedicalRecord> returnMedicalRecordsList() throws IOException {
+    public List<MedicalRecord> returnMedicalRecordsList() throws IOException {
         JsonElement medicalRecordsObject = entireFile.get("medicalrecords");
         Type type = new TypeToken<List<MedicalRecord>>() {
         }.getType();

@@ -36,9 +36,9 @@ public class AlertController {
     private static final Logger logger = LoggerFactory.getLogger(AlertController.class);
 
     public AlertController(ReadJson readJson) throws IOException {
-        this.personList = ReadJson.returnPersonsList();
-        this.firestationList = ReadJson.returnFirestationsList();
-        this.medicalRecordList = ReadJson.returnMedicalRecordsList();
+        this.personList = readJson.returnPersonsList();
+        this.firestationList = readJson.returnFirestationsList();
+        this.medicalRecordList = readJson.returnMedicalRecordsList();
     }
 
 
@@ -119,6 +119,8 @@ public class AlertController {
             adultsArray.add(adult);
         }
 
+        logger.info("ChildrenList = " + filteredAdultList + adultsArray);
+
         // Add children array and non children array to responseObject else return empty json body
         if (!childArray.isEmpty()) {
             responseJsonObject.add("children", childArray);
@@ -165,6 +167,8 @@ public class AlertController {
                 }
             }
         }
+
+        logger.info("phoneNumbers List" + phoneNumbers);
 
         Gson gson = new Gson();
         gson.toJson(phoneNumbers);

@@ -134,3 +134,907 @@
 2023-05-19T14:17:35.571-0400 INFO Deleted Medical Record = mansi.safetynetalerts.model.MedicalRecord@58b60adc
 2023-05-19T14:17:35.584-0400 INFO HTTP GET request received at /medicalRecord URL
 2023-05-19T14:17:35.584-0400 INFO MedicalRecords List = [mansi.safetynetalerts.model.MedicalRecord@c33cfd6, mansi.safetynetalerts.model.MedicalRecord@74147513, mansi.safetynetalerts.model.MedicalRecord@640ced00, mansi.safetynetalerts.model.MedicalRecord@58952935, mansi.safetynetalerts.model.MedicalRecord@4aca008e, mansi.safetynetalerts.model.MedicalRecord@1d214829, mansi.safetynetalerts.model.MedicalRecord@1e46d260, mansi.safetynetalerts.model.MedicalRecord@6feb9c1c, mansi.safetynetalerts.model.MedicalRecord@75bf3f1f, mansi.safetynetalerts.model.MedicalRecord@62485181, mansi.safetynetalerts.model.MedicalRecord@4a354a7a, mansi.safetynetalerts.model.MedicalRecord@798d345c, mansi.safetynetalerts.model.MedicalRecord@7546abb5, mansi.safetynetalerts.model.MedicalRecord@552238c5, mansi.safetynetalerts.model.MedicalRecord@35a4de81, mansi.safetynetalerts.model.MedicalRecord@251b23bd, mansi.safetynetalerts.model.MedicalRecord@65402fa8, mansi.safetynetalerts.model.MedicalRecord@2160c7d5, mansi.safetynetalerts.model.MedicalRecord@322345ae, mansi.safetynetalerts.model.MedicalRecord@4e598e9c, mansi.safetynetalerts.model.MedicalRecord@2a80d590, mansi.safetynetalerts.model.MedicalRecord@df9f17a, mansi.safetynetalerts.model.MedicalRecord@584f1dde]
+2023-05-19T14:22:12.621-0400 DEBUG Neither @ContextConfiguration nor @ContextHierarchy found for test class [PersonControllerIT]: using SpringBootContextLoader
+2023-05-19T14:22:12.626-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.PersonControllerIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T14:22:12.626-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.PersonControllerIT]: PersonControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T14:22:12.650-0400 DEBUG Using ContextCustomizers for test class [PersonControllerIT]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T14:22:12.758-0400 DEBUG Identified candidate component class: file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\SafetyNetAlertsApplication.class]
+2023-05-19T14:22:12.759-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.PersonControllerIT
+2023-05-19T14:22:12.836-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T14:22:12.837-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T14:22:12.839-0400 DEBUG Using TestExecutionListeners for test class [PersonControllerIT]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T14:22:12.840-0400 DEBUG Before test class: class [PersonControllerIT], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T14:22:12.851-0400 DEBUG Performing dependency injection for test class mansi.safetynetalerts.controller.PersonControllerIT
+2023-05-19T14:22:13.173-0400 INFO Starting PersonControllerIT using Java 17.0.3 with PID 10736 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T14:22:13.176-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T14:22:14.438-0400 INFO Tomcat initialized with port(s): 0 (http)
+2023-05-19T14:22:14.445-0400 INFO Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-05-19T14:22:14.446-0400 INFO Starting service [Tomcat]
+2023-05-19T14:22:14.447-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T14:22:14.537-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T14:22:14.540-0400 INFO Root WebApplicationContext: initialization completed in 1337 ms
+2023-05-19T14:22:17.032-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T14:22:17.136-0400 INFO Starting ProtocolHandler ["http-nio-auto-1"]
+2023-05-19T14:22:17.183-0400 INFO Tomcat started on port(s): 63259 (http) with context path ''
+2023-05-19T14:22:17.204-0400 INFO Started PersonControllerIT in 4.331 seconds (process running for 6.142)
+2023-05-19T14:22:18.158-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T14:22:18.159-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T14:22:18.160-0400 INFO Completed initialization in 1 ms
+2023-05-19T14:22:18.178-0400 INFO HTTP GET request received at /person URL
+2023-05-19T14:22:18.182-0400 INFO Person List = [Person{firstName='John', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Person{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Person{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Person{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Person{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Person{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Person{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Person{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Person{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Person{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Person{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Person{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}]
+2023-05-19T14:22:18.334-0400 INFO HTTP PUT request received at /person URL
+2023-05-19T14:22:18.335-0400 INFO Person Updated = Person{firstName='John', lastName='Boyd', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T14:22:18.362-0400 INFO HTTP DELETE request received at /person URL
+2023-05-19T14:22:18.364-0400 INFO Deleted Person = Person{firstName='John', lastName='Boyd', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T14:22:18.376-0400 INFO HTTP POST request received at /person URL
+2023-05-19T14:22:18.377-0400 INFO New Person added = Person{firstName='Mansi', lastName='Patel', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T14:22:18.386-0400 INFO HTTP GET request received at /person URL
+2023-05-19T14:22:18.388-0400 INFO Person List = [Person{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Person{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Person{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Person{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Person{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Person{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Person{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Person{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Person{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Person{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Person{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Person{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}, Person{firstName='Mansi', lastName='Patel', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}]
+2023-05-19T14:22:18.417-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.FirestationControllerIT]: FirestationControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T14:22:18.419-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.FirestationControllerIT
+2023-05-19T14:22:18.439-0400 INFO HTTP DELETE request received at /firestation URL
+2023-05-19T14:22:18.448-0400 INFO deleted Firestation = <200 OK OK,Firestation{address='951 LoneTree Rd', station='2'},[]>
+2023-05-19T14:22:18.461-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T14:22:18.461-0400 INFO Firestations List = [Firestation{address='1509 Culver St', station='3'}, Firestation{address='29 15th St', station='2'}, Firestation{address='834 Binoc Ave', station='3'}, Firestation{address='644 Gershwin Cir', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='112 Steppes Pl', station='3'}, Firestation{address='489 Manchester St', station='4'}, Firestation{address='892 Downing Ct', station='2'}, Firestation{address='908 73rd St', station='1'}, Firestation{address='112 Steppes Pl', station='4'}, Firestation{address='947 E. Rose Dr', station='1'}, Firestation{address='748 Townings Dr', station='3'}]
+2023-05-19T14:22:18.472-0400 INFO HTTP POST request received at /firestation URL
+2023-05-19T14:22:18.472-0400 INFO Added Firestation = Firestation{address='6007 Magnolia Park', station='8'}
+2023-05-19T14:22:18.483-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T14:22:18.483-0400 INFO Firestations List = [Firestation{address='1509 Culver St', station='3'}, Firestation{address='29 15th St', station='2'}, Firestation{address='834 Binoc Ave', station='3'}, Firestation{address='644 Gershwin Cir', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='112 Steppes Pl', station='3'}, Firestation{address='489 Manchester St', station='4'}, Firestation{address='892 Downing Ct', station='2'}, Firestation{address='908 73rd St', station='1'}, Firestation{address='112 Steppes Pl', station='4'}, Firestation{address='947 E. Rose Dr', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='6007 Magnolia Park', station='8'}]
+2023-05-19T14:22:18.495-0400 INFO HTTP PUT request received at /firestation URL
+2023-05-19T14:22:18.501-0400 INFO Updated Firestation = Firestation{address='1509 Culver St', station='8'}
+2023-05-19T14:22:18.535-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T14:22:18.591-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.FireStationControllerTest
+2023-05-19T14:22:18.682-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 10736 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T14:22:18.684-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T14:22:19.414-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T14:22:19.415-0400 INFO Initializing Servlet ''
+2023-05-19T14:22:19.416-0400 INFO Completed initialization in 1 ms
+2023-05-19T14:22:19.494-0400 INFO Started FireStationControllerTest in 0.862 seconds (process running for 8.432)
+2023-05-19T14:22:19.823-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.SafetyNetAlertsApplicationTests]: SafetyNetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T14:22:19.829-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.SafetyNetAlertsApplicationTests
+2023-05-19T14:22:19.874-0400 INFO Starting SafetyNetAlertsApplicationTests using Java 17.0.3 with PID 10736 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T14:22:19.877-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T14:22:20.410-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T14:22:20.432-0400 INFO Started SafetyNetAlertsApplicationTests in 0.595 seconds (process running for 9.37)
+2023-05-19T14:22:20.442-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.AlertControllerTest]: AlertControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T14:22:20.448-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.AlertControllerTest
+2023-05-19T14:22:20.486-0400 INFO Starting AlertControllerTest using Java 17.0.3 with PID 10736 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T14:22:20.488-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T14:22:20.686-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T14:22:20.687-0400 INFO Initializing Servlet ''
+2023-05-19T14:22:20.687-0400 INFO Completed initialization in 0 ms
+2023-05-19T14:22:20.689-0400 INFO Started AlertControllerTest in 0.238 seconds (process running for 9.628)
+2023-05-19T14:22:20.694-0400 INFO HTTP GET request received at /childAlert URL
+2023-05-19T14:22:20.716-0400 INFO HTTP GET request received at /childAlert URL
+2023-05-19T14:22:20.721-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.MedicalRecordControllerIT]: MedicalRecordControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T14:22:20.722-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.MedicalRecordControllerIT
+2023-05-19T14:22:20.743-0400 INFO HTTP PUT request received at /medicalRecord URL
+2023-05-19T14:22:20.749-0400 INFO Updated Medical Record = mansi.safetynetalerts.model.MedicalRecord@5e433f3e
+2023-05-19T14:22:20.758-0400 INFO HTTP GET request received at /medicalRecord URL
+2023-05-19T14:22:20.759-0400 INFO MedicalRecords List = [mansi.safetynetalerts.model.MedicalRecord@5e433f3e, mansi.safetynetalerts.model.MedicalRecord@37cd417c, mansi.safetynetalerts.model.MedicalRecord@2ea87ad1, mansi.safetynetalerts.model.MedicalRecord@72fa39e2, mansi.safetynetalerts.model.MedicalRecord@26e49e29, mansi.safetynetalerts.model.MedicalRecord@7b7ffd28, mansi.safetynetalerts.model.MedicalRecord@166c7e64, mansi.safetynetalerts.model.MedicalRecord@357a6062, mansi.safetynetalerts.model.MedicalRecord@376da532, mansi.safetynetalerts.model.MedicalRecord@337f884a, mansi.safetynetalerts.model.MedicalRecord@46955f1f, mansi.safetynetalerts.model.MedicalRecord@200a4edf, mansi.safetynetalerts.model.MedicalRecord@7a143bd9, mansi.safetynetalerts.model.MedicalRecord@3566d109, mansi.safetynetalerts.model.MedicalRecord@59671d1d, mansi.safetynetalerts.model.MedicalRecord@2b69dc58, mansi.safetynetalerts.model.MedicalRecord@7078e01f, mansi.safetynetalerts.model.MedicalRecord@73958980, mansi.safetynetalerts.model.MedicalRecord@127bed1a, mansi.safetynetalerts.model.MedicalRecord@77956811, mansi.safetynetalerts.model.MedicalRecord@40da16e4, mansi.safetynetalerts.model.MedicalRecord@1f5c5ef6, mansi.safetynetalerts.model.MedicalRecord@5202633a]
+2023-05-19T14:22:20.769-0400 INFO HTTP POST request received at /medicalRecord URL
+2023-05-19T14:22:20.770-0400 INFO New Medical Record = mansi.safetynetalerts.model.MedicalRecord@3c1a7c15
+2023-05-19T14:22:20.777-0400 INFO HTTP DELETE request received at /medicalRecord URL
+2023-05-19T14:22:20.781-0400 INFO Deleted Medical Record = mansi.safetynetalerts.model.MedicalRecord@5e433f3e
+2023-05-19T14:22:20.789-0400 INFO HTTP GET request received at /medicalRecord URL
+2023-05-19T14:22:20.789-0400 INFO MedicalRecords List = [mansi.safetynetalerts.model.MedicalRecord@37cd417c, mansi.safetynetalerts.model.MedicalRecord@2ea87ad1, mansi.safetynetalerts.model.MedicalRecord@72fa39e2, mansi.safetynetalerts.model.MedicalRecord@26e49e29, mansi.safetynetalerts.model.MedicalRecord@7b7ffd28, mansi.safetynetalerts.model.MedicalRecord@166c7e64, mansi.safetynetalerts.model.MedicalRecord@357a6062, mansi.safetynetalerts.model.MedicalRecord@376da532, mansi.safetynetalerts.model.MedicalRecord@337f884a, mansi.safetynetalerts.model.MedicalRecord@46955f1f, mansi.safetynetalerts.model.MedicalRecord@200a4edf, mansi.safetynetalerts.model.MedicalRecord@7a143bd9, mansi.safetynetalerts.model.MedicalRecord@3566d109, mansi.safetynetalerts.model.MedicalRecord@59671d1d, mansi.safetynetalerts.model.MedicalRecord@2b69dc58, mansi.safetynetalerts.model.MedicalRecord@7078e01f, mansi.safetynetalerts.model.MedicalRecord@73958980, mansi.safetynetalerts.model.MedicalRecord@127bed1a, mansi.safetynetalerts.model.MedicalRecord@77956811, mansi.safetynetalerts.model.MedicalRecord@40da16e4, mansi.safetynetalerts.model.MedicalRecord@1f5c5ef6, mansi.safetynetalerts.model.MedicalRecord@5202633a, mansi.safetynetalerts.model.MedicalRecord@3c1a7c15]
+2023-05-19T16:24:01.078-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 25980 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T16:24:01.093-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T16:24:01.160-0400 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-19T16:24:01.161-0400 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-19T16:24:03.563-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T16:24:03.587-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T16:24:03.591-0400 INFO Starting service [Tomcat]
+2023-05-19T16:24:03.592-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T16:24:03.724-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T16:24:03.733-0400 INFO Root WebApplicationContext: initialization completed in 2563 ms
+2023-05-19T16:24:07.852-0400 INFO LiveReload server is running on port 35729
+2023-05-19T16:24:07.870-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T16:24:08.070-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T16:24:08.195-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T16:24:08.242-0400 INFO Started SafetyNetAlertsApplication in 7.8 seconds (process running for 9.876)
+2023-05-19T16:24:14.686-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T16:24:14.687-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T16:24:14.689-0400 INFO Completed initialization in 2 ms
+2023-05-19T16:24:14.757-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T16:24:14.768-0400 INFO Person List[{"firstName":"Roger","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Ron","lastName":"Peters","address":"112 Steppes Pl","phoneNum":"841-874-8888"}, {"firstName":"Tony","lastName":"Cooper","address":"112 Steppes Pl","phoneNum":"841-874-6874"}, {"firstName":"Foster","lastName":"Shepard","address":"748 Townings Dr","phoneNum":"841-874-6544"}, {"firstName":"John","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Allison","lastName":"Boyd","address":"112 Steppes Pl","phoneNum":"841-874-9888"}, {"firstName":"Tenley","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Clive","lastName":"Ferguson","address":"748 Townings Dr","phoneNum":"841-874-6741"}, {"firstName":"Jacob","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6513"}, {"firstName":"Felicia","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6544"}, {"firstName":"Tessa","lastName":"Carman","address":"834 Binoc Ave","phoneNum":"841-874-6512"}, {"children":3,"adults":8}]
+2023-05-19T16:24:31.670-0400 INFO HTTP GET request received at /childAlert URL
+2023-05-19T16:24:31.676-0400 INFO ChildrenList = [{"firstName":"John","lastName":"Boyd","address":"1509 Culver St"}, {"firstName":"Jacob","lastName":"Boyd","address":"1509 Culver St"}, {"firstName":"Felicia","lastName":"Boyd","address":"1509 Culver St"}][{"firstName":"John","lastName":"Boyd","address":"1509 Culver St"},{"firstName":"Jacob","lastName":"Boyd","address":"1509 Culver St"},{"firstName":"Felicia","lastName":"Boyd","address":"1509 Culver St"}]
+2023-05-19T16:24:44.892-0400 INFO HTTP GET request received at /phoneAlert URL
+2023-05-19T16:24:44.894-0400 INFO phoneNumbers List[841-874-6512, 841-874-6513, 841-874-6544, 841-874-6741, 841-874-6874, 841-874-8888, 841-874-9888]
+2023-05-19T17:07:44.963-0400 DEBUG Neither @ContextConfiguration nor @ContextHierarchy found for test class [PersonControllerIT]: using SpringBootContextLoader
+2023-05-19T17:07:45.015-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.PersonControllerIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:07:45.018-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.PersonControllerIT]: PersonControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:07:45.115-0400 DEBUG Using ContextCustomizers for test class [PersonControllerIT]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:07:45.483-0400 DEBUG Identified candidate component class: file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\SafetyNetAlertsApplication.class]
+2023-05-19T17:07:45.485-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.PersonControllerIT
+2023-05-19T17:07:45.880-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:07:45.884-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:07:45.889-0400 DEBUG Using TestExecutionListeners for test class [PersonControllerIT]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:07:45.892-0400 DEBUG Before test class: class [PersonControllerIT], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:07:45.933-0400 DEBUG Performing dependency injection for test class mansi.safetynetalerts.controller.PersonControllerIT
+2023-05-19T17:07:47.241-0400 INFO Starting PersonControllerIT using Java 17.0.3 with PID 6728 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:07:47.254-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:07:52.301-0400 INFO Tomcat initialized with port(s): 0 (http)
+2023-05-19T17:07:52.381-0400 INFO Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-05-19T17:07:52.396-0400 INFO Starting service [Tomcat]
+2023-05-19T17:07:52.400-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:07:52.942-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:07:52.946-0400 INFO Root WebApplicationContext: initialization completed in 5561 ms
+2023-05-19T17:07:57.796-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:07:58.366-0400 INFO Starting ProtocolHandler ["http-nio-auto-1"]
+2023-05-19T17:07:58.586-0400 INFO Tomcat started on port(s): 50118 (http) with context path ''
+2023-05-19T17:07:58.699-0400 INFO Started PersonControllerIT in 12.675 seconds (process running for 23.918)
+2023-05-19T17:08:01.697-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T17:08:01.698-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T17:08:01.700-0400 INFO Completed initialization in 1 ms
+2023-05-19T17:08:01.795-0400 INFO HTTP GET request received at /person URL
+2023-05-19T17:08:01.806-0400 INFO Person List = [Person{firstName='John', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Person{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Person{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Person{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Person{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Person{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Person{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Person{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Person{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Person{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Person{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Person{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}]
+2023-05-19T17:08:02.542-0400 INFO HTTP PUT request received at /person URL
+2023-05-19T17:08:02.547-0400 INFO Person Updated = Person{firstName='John', lastName='Boyd', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T17:08:02.637-0400 INFO HTTP DELETE request received at /person URL
+2023-05-19T17:08:02.643-0400 INFO Deleted Person = Person{firstName='John', lastName='Boyd', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T17:08:02.666-0400 INFO HTTP POST request received at /person URL
+2023-05-19T17:08:02.668-0400 INFO New Person added = Person{firstName='Mansi', lastName='Patel', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T17:08:02.696-0400 INFO HTTP GET request received at /person URL
+2023-05-19T17:08:02.698-0400 INFO Person List = [Person{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Person{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Person{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Person{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Person{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Person{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Person{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Person{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Person{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Person{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Person{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Person{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}, Person{firstName='Mansi', lastName='Patel', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}]
+2023-05-19T17:08:02.766-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.FirestationControllerIT]: FirestationControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:08:02.771-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.FirestationControllerIT
+2023-05-19T17:08:02.803-0400 INFO HTTP DELETE request received at /firestation URL
+2023-05-19T17:08:02.818-0400 INFO deleted Firestation = <200 OK OK,Firestation{address='951 LoneTree Rd', station='2'},[]>
+2023-05-19T17:08:02.843-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:08:02.844-0400 INFO Firestations List = [Firestation{address='1509 Culver St', station='3'}, Firestation{address='29 15th St', station='2'}, Firestation{address='834 Binoc Ave', station='3'}, Firestation{address='644 Gershwin Cir', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='112 Steppes Pl', station='3'}, Firestation{address='489 Manchester St', station='4'}, Firestation{address='892 Downing Ct', station='2'}, Firestation{address='908 73rd St', station='1'}, Firestation{address='112 Steppes Pl', station='4'}, Firestation{address='947 E. Rose Dr', station='1'}, Firestation{address='748 Townings Dr', station='3'}]
+2023-05-19T17:08:02.865-0400 INFO HTTP POST request received at /firestation URL
+2023-05-19T17:08:02.866-0400 INFO Added Firestation = Firestation{address='6007 Magnolia Park', station='8'}
+2023-05-19T17:08:02.884-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:08:02.885-0400 INFO Firestations List = [Firestation{address='1509 Culver St', station='3'}, Firestation{address='29 15th St', station='2'}, Firestation{address='834 Binoc Ave', station='3'}, Firestation{address='644 Gershwin Cir', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='112 Steppes Pl', station='3'}, Firestation{address='489 Manchester St', station='4'}, Firestation{address='892 Downing Ct', station='2'}, Firestation{address='908 73rd St', station='1'}, Firestation{address='112 Steppes Pl', station='4'}, Firestation{address='947 E. Rose Dr', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='6007 Magnolia Park', station='8'}]
+2023-05-19T17:08:02.910-0400 INFO HTTP PUT request received at /firestation URL
+2023-05-19T17:08:02.919-0400 INFO Updated Firestation = Firestation{address='1509 Culver St', station='8'}
+2023-05-19T17:08:02.965-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:08:03.068-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.FireStationControllerTest
+2023-05-19T17:08:03.210-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 6728 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:08:03.215-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:08:04.312-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:08:04.312-0400 INFO Initializing Servlet ''
+2023-05-19T17:08:04.315-0400 INFO Completed initialization in 2 ms
+2023-05-19T17:08:04.380-0400 INFO Started FireStationControllerTest in 1.263 seconds (process running for 29.6)
+2023-05-19T17:08:04.573-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:08:04.587-0400 INFO Person List[{"firstName":"Brian","lastName":"Stelzer","address":"947 E. Rose Dr","phoneNum":"841-874-7784"}, {"firstName":"Jamie","lastName":"Peters","address":"908 73rd St","phoneNum":"841-874-7462"}, {"firstName":"Shawna","lastName":"Stelzer","address":"947 E. Rose Dr","phoneNum":"841-874-7784"}, {"firstName":"Reginold","lastName":"Walker","address":"908 73rd St","phoneNum":"841-874-8547"}, {"firstName":"Peter","lastName":"Duncan","address":"644 Gershwin Cir","phoneNum":"841-874-6512"}, {"firstName":"Kendrik","lastName":"Stelzer","address":"947 E. Rose Dr","phoneNum":"841-874-7784"}, {"children":1,"adults":5}]
+2023-05-19T17:08:04.782-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:08:04.825-0400 INFO HTTP GET request received at /fire URL
+2023-05-19T17:08:04.841-0400 INFO Person List[{"stationNum":"3"}, {"firstName":"Roger","lastName":"Boyd","phoneNum":"841-874-6512","age":"5","medications":[],"allergies":[]}, {"firstName":"John","lastName":"Boyd","phoneNum":"841-874-6512","age":"39","medications":["aznol:350mg","hydrapermazol:100mg"],"allergies":["nillacilan"]}, {"firstName":"Tenley","lastName":"Boyd","phoneNum":"841-874-6512","age":"11","medications":[],"allergies":["peanut"]}, {"firstName":"Jacob","lastName":"Boyd","phoneNum":"841-874-6513","age":"34","medications":["pharmacol:5000mg","terazine:10mg","noznazol:250mg"],"allergies":[]}, {"firstName":"Felicia","lastName":"Boyd","phoneNum":"841-874-6544","age":"37","medications":["tetracyclaz:650mg"],"allergies":["xilliathal"]}]
+2023-05-19T17:08:04.863-0400 INFO HTTP GET request received at /fire URL
+2023-05-19T17:08:04.886-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.SafetyNetAlertsApplicationTests]: SafetyNetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:08:04.903-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.SafetyNetAlertsApplicationTests
+2023-05-19T17:08:05.011-0400 INFO Starting SafetyNetAlertsApplicationTests using Java 17.0.3 with PID 6728 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:08:05.015-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:08:06.088-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:08:06.122-0400 INFO Started SafetyNetAlertsApplicationTests in 1.2 seconds (process running for 31.341)
+2023-05-19T17:08:06.143-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.AlertControllerTest]: AlertControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:08:06.154-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.AlertControllerTest
+2023-05-19T17:08:06.249-0400 INFO Starting AlertControllerTest using Java 17.0.3 with PID 6728 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:08:06.253-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:08:06.743-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:08:06.743-0400 INFO Initializing Servlet ''
+2023-05-19T17:08:06.746-0400 INFO Completed initialization in 3 ms
+2023-05-19T17:08:06.752-0400 INFO Started AlertControllerTest in 0.59 seconds (process running for 31.972)
+2023-05-19T17:08:06.763-0400 INFO HTTP GET request received at /childAlert URL
+2023-05-19T17:08:06.785-0400 INFO ChildrenList = [{"firstName":"Brian","lastName":"Stelzer","address":"947 E. Rose Dr"}, {"firstName":"Shawna","lastName":"Stelzer","address":"947 E. Rose Dr"}][{"firstName":"Brian","lastName":"Stelzer","address":"947 E. Rose Dr"},{"firstName":"Shawna","lastName":"Stelzer","address":"947 E. Rose Dr"}]
+2023-05-19T17:08:06.815-0400 INFO HTTP GET request received at /childAlert URL
+2023-05-19T17:08:06.817-0400 INFO ChildrenList = [{"firstName":"Ron","lastName":"Peters","address":"112 Steppes Pl"}, {"firstName":"Tony","lastName":"Cooper","address":"112 Steppes Pl"}, {"firstName":"Allison","lastName":"Boyd","address":"112 Steppes Pl"}][{"firstName":"Ron","lastName":"Peters","address":"112 Steppes Pl"},{"firstName":"Tony","lastName":"Cooper","address":"112 Steppes Pl"},{"firstName":"Allison","lastName":"Boyd","address":"112 Steppes Pl"}]
+2023-05-19T17:08:06.828-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.MedicalRecordControllerIT]: MedicalRecordControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:08:06.836-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.MedicalRecordControllerIT
+2023-05-19T17:08:06.889-0400 INFO HTTP PUT request received at /medicalRecord URL
+2023-05-19T17:08:06.901-0400 INFO Updated Medical Record = mansi.safetynetalerts.model.MedicalRecord@6baeaa2e
+2023-05-19T17:08:06.936-0400 INFO HTTP GET request received at /medicalRecord URL
+2023-05-19T17:08:06.937-0400 INFO MedicalRecords List = [mansi.safetynetalerts.model.MedicalRecord@6baeaa2e, mansi.safetynetalerts.model.MedicalRecord@34dd61f2, mansi.safetynetalerts.model.MedicalRecord@53f099eb, mansi.safetynetalerts.model.MedicalRecord@4d41fa78, mansi.safetynetalerts.model.MedicalRecord@1919b91b, mansi.safetynetalerts.model.MedicalRecord@4694893b, mansi.safetynetalerts.model.MedicalRecord@11fc6fc3, mansi.safetynetalerts.model.MedicalRecord@532cd5be, mansi.safetynetalerts.model.MedicalRecord@7a97fa1, mansi.safetynetalerts.model.MedicalRecord@6516e33e, mansi.safetynetalerts.model.MedicalRecord@17e60a28, mansi.safetynetalerts.model.MedicalRecord@22d2bc4f, mansi.safetynetalerts.model.MedicalRecord@6e4a9bc3, mansi.safetynetalerts.model.MedicalRecord@3c179a27, mansi.safetynetalerts.model.MedicalRecord@1b0770c7, mansi.safetynetalerts.model.MedicalRecord@2c80872c, mansi.safetynetalerts.model.MedicalRecord@16ae85fc, mansi.safetynetalerts.model.MedicalRecord@1668e3ac, mansi.safetynetalerts.model.MedicalRecord@36c928ee, mansi.safetynetalerts.model.MedicalRecord@1ed870fc, mansi.safetynetalerts.model.MedicalRecord@7c3b87be, mansi.safetynetalerts.model.MedicalRecord@2d1f6e16, mansi.safetynetalerts.model.MedicalRecord@52eead03]
+2023-05-19T17:08:06.973-0400 INFO HTTP POST request received at /medicalRecord URL
+2023-05-19T17:08:06.975-0400 INFO New Medical Record = mansi.safetynetalerts.model.MedicalRecord@769efb6a
+2023-05-19T17:08:06.997-0400 INFO HTTP DELETE request received at /medicalRecord URL
+2023-05-19T17:08:07.005-0400 INFO Deleted Medical Record = mansi.safetynetalerts.model.MedicalRecord@6baeaa2e
+2023-05-19T17:08:07.036-0400 INFO HTTP GET request received at /medicalRecord URL
+2023-05-19T17:08:07.036-0400 INFO MedicalRecords List = [mansi.safetynetalerts.model.MedicalRecord@34dd61f2, mansi.safetynetalerts.model.MedicalRecord@53f099eb, mansi.safetynetalerts.model.MedicalRecord@4d41fa78, mansi.safetynetalerts.model.MedicalRecord@1919b91b, mansi.safetynetalerts.model.MedicalRecord@4694893b, mansi.safetynetalerts.model.MedicalRecord@11fc6fc3, mansi.safetynetalerts.model.MedicalRecord@532cd5be, mansi.safetynetalerts.model.MedicalRecord@7a97fa1, mansi.safetynetalerts.model.MedicalRecord@6516e33e, mansi.safetynetalerts.model.MedicalRecord@17e60a28, mansi.safetynetalerts.model.MedicalRecord@22d2bc4f, mansi.safetynetalerts.model.MedicalRecord@6e4a9bc3, mansi.safetynetalerts.model.MedicalRecord@3c179a27, mansi.safetynetalerts.model.MedicalRecord@1b0770c7, mansi.safetynetalerts.model.MedicalRecord@2c80872c, mansi.safetynetalerts.model.MedicalRecord@16ae85fc, mansi.safetynetalerts.model.MedicalRecord@1668e3ac, mansi.safetynetalerts.model.MedicalRecord@36c928ee, mansi.safetynetalerts.model.MedicalRecord@1ed870fc, mansi.safetynetalerts.model.MedicalRecord@7c3b87be, mansi.safetynetalerts.model.MedicalRecord@2d1f6e16, mansi.safetynetalerts.model.MedicalRecord@52eead03, mansi.safetynetalerts.model.MedicalRecord@769efb6a]
+2023-05-19T17:12:41.367-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 10324 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:12:41.389-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:12:41.515-0400 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-19T17:12:41.516-0400 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-19T17:12:46.250-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:12:46.304-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:12:46.310-0400 INFO Starting service [Tomcat]
+2023-05-19T17:12:46.311-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:12:46.762-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:12:46.782-0400 INFO Root WebApplicationContext: initialization completed in 5249 ms
+2023-05-19T17:12:50.991-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:12:51.026-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:12:51.259-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:12:51.475-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:12:51.569-0400 INFO Started SafetyNetAlertsApplication in 11.564 seconds (process running for 15.998)
+2023-05-19T17:13:14.411-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T17:13:14.412-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T17:13:14.418-0400 INFO Completed initialization in 4 ms
+2023-05-19T17:13:14.616-0400 INFO HTTP GET request received at /fire URL
+2023-05-19T17:13:14.640-0400 INFO Person List[{"stationNum":"3"}, {"firstName":"Roger","lastName":"Boyd","phoneNum":"841-874-6512","age":"5","medications":[],"allergies":[]}, {"firstName":"John","lastName":"Boyd","phoneNum":"841-874-6512","age":"39","medications":["aznol:350mg","hydrapermazol:100mg"],"allergies":["nillacilan"]}, {"firstName":"Tenley","lastName":"Boyd","phoneNum":"841-874-6512","age":"11","medications":[],"allergies":["peanut"]}, {"firstName":"Jacob","lastName":"Boyd","phoneNum":"841-874-6513","age":"34","medications":["pharmacol:5000mg","terazine:10mg","noznazol:250mg"],"allergies":[]}, {"firstName":"Felicia","lastName":"Boyd","phoneNum":"841-874-6544","age":"37","medications":["tetracyclaz:650mg"],"allergies":["xilliathal"]}]
+2023-05-19T17:20:29.677-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:20:29.712-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:20:29.897-0400 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-19T17:20:29.898-0400 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-19T17:20:35.013-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:20:35.074-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:20:35.078-0400 INFO Starting service [Tomcat]
+2023-05-19T17:20:35.082-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:20:35.435-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:20:35.447-0400 INFO Root WebApplicationContext: initialization completed in 5538 ms
+2023-05-19T17:20:38.998-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:20:39.027-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:20:39.253-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:20:39.385-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:20:39.550-0400 INFO Started SafetyNetAlertsApplication in 11.412 seconds (process running for 15.575)
+2023-05-19T17:20:55.150-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T17:20:55.151-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T17:20:55.155-0400 INFO Completed initialization in 3 ms
+2023-05-19T17:20:55.323-0400 INFO HTTP GET request received at /fire URL
+2023-05-19T17:20:55.359-0400 INFO Person List[{"firstName":"Roger","lastName":"Boyd","phoneNum":"841-874-6512","age":"5","medications":[],"allergies":[]}, {"firstName":"John","lastName":"Boyd","phoneNum":"841-874-6512","age":"39","medications":["aznol:350mg","hydrapermazol:100mg"],"allergies":["nillacilan"]}, {"firstName":"Tenley","lastName":"Boyd","phoneNum":"841-874-6512","age":"11","medications":[],"allergies":["peanut"]}, {"firstName":"Jacob","lastName":"Boyd","phoneNum":"841-874-6513","age":"34","medications":["pharmacol:5000mg","terazine:10mg","noznazol:250mg"],"allergies":[]}, {"firstName":"Felicia","lastName":"Boyd","phoneNum":"841-874-6544","age":"37","medications":["tetracyclaz:650mg"],"allergies":["xilliathal"]}]
+2023-05-19T17:21:42.408-0400 INFO Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2023-05-19T17:21:42.442-0400 INFO Pausing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:42.443-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:21:42.446-0400 INFO Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-19T17:21:42.464-0400 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:42.471-0400 INFO Destroying ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:42.933-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:21:42.935-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:21:44.520-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:21:44.525-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:44.529-0400 INFO Starting service [Tomcat]
+2023-05-19T17:21:44.530-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:21:44.668-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:21:44.669-0400 INFO Root WebApplicationContext: initialization completed in 1722 ms
+2023-05-19T17:21:46.465-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:21:46.482-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:21:46.538-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:46.555-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:21:46.575-0400 INFO Started SafetyNetAlertsApplication in 3.973 seconds (process running for 82.602)
+2023-05-19T17:21:46.589-0400 INFO Condition evaluation unchanged
+2023-05-19T17:21:54.046-0400 INFO Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-05-19T17:21:54.098-0400 INFO Pausing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:54.100-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:21:54.105-0400 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:54.114-0400 INFO Destroying ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:54.845-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:21:54.848-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:21:56.625-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:21:56.628-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:56.631-0400 INFO Starting service [Tomcat]
+2023-05-19T17:21:56.635-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:21:56.720-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:21:56.721-0400 INFO Root WebApplicationContext: initialization completed in 1863 ms
+2023-05-19T17:21:57.971-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:21:57.980-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:21:58.032-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:21:58.054-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:21:58.088-0400 INFO Started SafetyNetAlertsApplication in 3.815 seconds (process running for 94.113)
+2023-05-19T17:21:58.094-0400 INFO Condition evaluation unchanged
+2023-05-19T17:22:05.257-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T17:22:05.257-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T17:22:05.260-0400 INFO Completed initialization in 1 ms
+2023-05-19T17:22:05.269-0400 INFO HTTP GET request received at /fire URL
+2023-05-19T17:22:05.287-0400 INFO Person List[{"firstName":"Roger","lastName":"Boyd","phoneNum":"841-874-6512","age":"5","medications":[],"allergies":[]}, {"firstName":"John","lastName":"Boyd","phoneNum":"841-874-6512","age":"39","medications":["aznol:350mg","hydrapermazol:100mg"],"allergies":["nillacilan"]}, {"firstName":"Tenley","lastName":"Boyd","phoneNum":"841-874-6512","age":"11","medications":[],"allergies":["peanut"]}, {"firstName":"Jacob","lastName":"Boyd","phoneNum":"841-874-6513","age":"34","medications":["pharmacol:5000mg","terazine:10mg","noznazol:250mg"],"allergies":[]}, {"firstName":"Felicia","lastName":"Boyd","phoneNum":"841-874-6544","age":"37","medications":["tetracyclaz:650mg"],"allergies":["xilliathal"]}]
+2023-05-19T17:26:23.875-0400 INFO Restarting due to 5 class path changes (0 additions, 5 deletions, 0 modifications)
+2023-05-19T17:26:23.897-0400 INFO Pausing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:26:23.897-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:26:23.898-0400 INFO Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-05-19T17:26:23.903-0400 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:26:23.909-0400 INFO Destroying ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:26:24.139-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:26:24.141-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:26:24.922-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:26:24.923-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:26:24.925-0400 INFO Starting service [Tomcat]
+2023-05-19T17:26:24.926-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:26:24.954-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:26:24.955-0400 INFO Root WebApplicationContext: initialization completed in 811 ms
+2023-05-19T17:26:25.041-0400 WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'alertController': Resolution of declared constructors on bean Class [mansi.safetynetalerts.controller.AlertController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@66ca5a5e] failed
+2023-05-19T17:26:25.043-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:26:25.071-0400 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-19T17:26:25.196-0400 ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'alertController': Resolution of declared constructors on bean Class [mansi.safetynetalerts.controller.AlertController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@66ca5a5e] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:356) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at mansi.safetynetalerts.SafetyNetAlertsApplication.main(SafetyNetAlertsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.NoClassDefFoundError: mansi/safetynetalerts/jsontopojo/ReadJson
+	at java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:3373) ~[?:?]
+	at java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:351) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: mansi.safetynetalerts.jsontopojo.ReadJson
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:3373) ~[?:?]
+	at java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:351) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 more
+2023-05-19T17:26:32.996-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:26:33.003-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:26:33.979-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:26:33.982-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:26:33.984-0400 INFO Starting service [Tomcat]
+2023-05-19T17:26:33.986-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:26:34.060-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:26:34.061-0400 INFO Root WebApplicationContext: initialization completed in 1050 ms
+2023-05-19T17:26:34.789-0400 WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'alertController' defined in file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\controller\AlertController.class]: Failed to instantiate [mansi.safetynetalerts.controller.AlertController]: Constructor threw exception
+2023-05-19T17:26:34.790-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:26:34.798-0400 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-19T17:26:34.802-0400 ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'alertController' defined in file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\controller\AlertController.class]: Failed to instantiate [mansi.safetynetalerts.controller.AlertController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at mansi.safetynetalerts.SafetyNetAlertsApplication.main(SafetyNetAlertsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [mansi.safetynetalerts.controller.AlertController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 more
+Caused by: java.lang.IncompatibleClassChangeError: Expected static method 'java.util.List mansi.safetynetalerts.jsontopojo.ReadJson.returnPersonsList()'
+	at mansi.safetynetalerts.controller.AlertController.<init>(AlertController.java:39) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 more
+2023-05-19T17:27:30.083-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:27:30.086-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:27:31.208-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:27:31.236-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:31.239-0400 INFO Starting service [Tomcat]
+2023-05-19T17:27:31.240-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:27:31.322-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:27:31.322-0400 INFO Root WebApplicationContext: initialization completed in 1233 ms
+2023-05-19T17:27:31.961-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:27:31.967-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:27:32.002-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:32.014-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:27:32.026-0400 INFO Started SafetyNetAlertsApplication in 2.525 seconds (process running for 428.052)
+2023-05-19T17:27:32.032-0400 INFO Condition evaluation unchanged
+2023-05-19T17:27:40.589-0400 INFO Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2023-05-19T17:27:40.669-0400 INFO Pausing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:40.670-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:27:40.677-0400 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:40.683-0400 INFO Destroying ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:41.061-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:27:41.063-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:27:42.403-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:27:42.406-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:42.406-0400 INFO Starting service [Tomcat]
+2023-05-19T17:27:42.407-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:27:42.440-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:27:42.441-0400 INFO Root WebApplicationContext: initialization completed in 1373 ms
+2023-05-19T17:27:43.687-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:27:43.692-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:27:43.726-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:43.748-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:27:43.762-0400 INFO Started SafetyNetAlertsApplication in 2.881 seconds (process running for 439.789)
+2023-05-19T17:27:43.767-0400 INFO Condition evaluation unchanged
+2023-05-19T17:27:45.138-0400 INFO Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-05-19T17:27:45.173-0400 INFO Pausing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:45.175-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:27:45.182-0400 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:45.190-0400 INFO Destroying ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:45.596-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:27:45.598-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:27:46.870-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:27:46.882-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:46.907-0400 INFO Starting service [Tomcat]
+2023-05-19T17:27:46.912-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:27:46.971-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:27:46.971-0400 INFO Root WebApplicationContext: initialization completed in 1367 ms
+2023-05-19T17:27:48.039-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:27:48.055-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:27:48.097-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:27:48.106-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:27:48.115-0400 INFO Started SafetyNetAlertsApplication in 2.745 seconds (process running for 444.141)
+2023-05-19T17:27:48.120-0400 INFO Condition evaluation unchanged
+2023-05-19T17:28:32.886-0400 INFO Restarting due to 5 class path changes (0 additions, 5 deletions, 0 modifications)
+2023-05-19T17:28:32.921-0400 INFO Pausing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:32.921-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:28:32.927-0400 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:32.933-0400 INFO Destroying ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:33.733-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:28:33.736-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:28:34.593-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:28:34.595-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:34.596-0400 INFO Starting service [Tomcat]
+2023-05-19T17:28:34.597-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:28:34.650-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:28:34.651-0400 INFO Root WebApplicationContext: initialization completed in 909 ms
+2023-05-19T17:28:34.950-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:28:35.028-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:28:35.182-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:35.191-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:28:35.216-0400 INFO Started SafetyNetAlertsApplication in 2.035 seconds (process running for 491.242)
+2023-05-19T17:28:35.221-0400 INFO Condition evaluation unchanged
+2023-05-19T17:28:44.562-0400 INFO Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2023-05-19T17:28:44.581-0400 INFO Pausing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:44.582-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:28:44.586-0400 INFO Stopping ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:44.592-0400 INFO Destroying ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:44.929-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:28:44.931-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:28:45.930-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:28:45.932-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:45.933-0400 INFO Starting service [Tomcat]
+2023-05-19T17:28:45.936-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:28:46.031-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:28:46.032-0400 INFO Root WebApplicationContext: initialization completed in 1095 ms
+2023-05-19T17:28:47.236-0400 WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fireStationController' defined in file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\controller\FireStationController.class]: Failed to instantiate [mansi.safetynetalerts.controller.FireStationController]: Constructor threw exception
+2023-05-19T17:28:47.238-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:28:47.260-0400 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-19T17:28:47.274-0400 ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fireStationController' defined in file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\controller\FireStationController.class]: Failed to instantiate [mansi.safetynetalerts.controller.FireStationController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:312) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at mansi.safetynetalerts.SafetyNetAlertsApplication.main(SafetyNetAlertsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [mansi.safetynetalerts.controller.FireStationController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 more
+Caused by: java.lang.NoClassDefFoundError: mansi/safetynetalerts/jsontopojo/ReadJson$2
+	at mansi.safetynetalerts.jsontopojo.ReadJson.returnPersonsList(ReadJson.java:77) ~[classes/:?]
+	at mansi.safetynetalerts.controller.FireStationController.<init>(FireStationController.java:40) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 more
+Caused by: java.lang.ClassNotFoundException: mansi.safetynetalerts.jsontopojo.ReadJson$2
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at mansi.safetynetalerts.jsontopojo.ReadJson.returnPersonsList(ReadJson.java:77) ~[classes/:?]
+	at mansi.safetynetalerts.controller.FireStationController.<init>(FireStationController.java:40) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:110) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 24 more
+2023-05-19T17:28:48.841-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:28:48.843-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:28:49.685-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:28:49.687-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:49.688-0400 INFO Starting service [Tomcat]
+2023-05-19T17:28:49.690-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:28:49.739-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:28:49.740-0400 INFO Root WebApplicationContext: initialization completed in 892 ms
+2023-05-19T17:28:49.830-0400 WARN Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'alertController': Resolution of declared constructors on bean Class [mansi.safetynetalerts.controller.AlertController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1ad39a60] failed
+2023-05-19T17:28:49.831-0400 INFO Stopping service [Tomcat]
+2023-05-19T17:28:49.857-0400 INFO 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-05-19T17:28:49.873-0400 ERROR Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'alertController': Resolution of declared constructors on bean Class [mansi.safetynetalerts.controller.AlertController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1ad39a60] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:356) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1283) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961) ~[spring-beans-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.6.jar:6.0.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
+	at mansi.safetynetalerts.SafetyNetAlertsApplication.main(SafetyNetAlertsApplication.java:10) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+Caused by: java.lang.NoClassDefFoundError: mansi/safetynetalerts/jsontopojo/ReadJson
+	at java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:3373) ~[?:?]
+	at java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:351) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 more
+Caused by: java.lang.ClassNotFoundException: mansi.safetynetalerts.jsontopojo.ReadJson
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.lang.Class.forName(Class.java:467) ~[?:?]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.4.jar:3.0.4]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	at java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:3373) ~[?:?]
+	at java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[?:?]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:351) ~[spring-beans-6.0.6.jar:6.0.6]
+	... 23 more
+2023-05-19T17:28:52.488-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 9816 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:28:52.491-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:28:53.407-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:28:53.426-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:53.428-0400 INFO Starting service [Tomcat]
+2023-05-19T17:28:53.428-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:28:53.512-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:28:53.513-0400 INFO Root WebApplicationContext: initialization completed in 1014 ms
+2023-05-19T17:28:55.045-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:28:55.082-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:28:55.127-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:28:55.139-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:28:55.153-0400 INFO Started SafetyNetAlertsApplication in 2.771 seconds (process running for 511.179)
+2023-05-19T17:28:55.160-0400 INFO Condition evaluation unchanged
+2023-05-19T17:28:59.798-0400 DEBUG Neither @ContextConfiguration nor @ContextHierarchy found for test class [PersonControllerIT]: using SpringBootContextLoader
+2023-05-19T17:28:59.813-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.PersonControllerIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:28:59.815-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.PersonControllerIT]: PersonControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:28:59.914-0400 DEBUG Using ContextCustomizers for test class [PersonControllerIT]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:29:00.300-0400 DEBUG Identified candidate component class: file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\SafetyNetAlertsApplication.class]
+2023-05-19T17:29:00.304-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.PersonControllerIT
+2023-05-19T17:29:00.638-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:29:00.641-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:29:00.645-0400 DEBUG Using TestExecutionListeners for test class [PersonControllerIT]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:29:00.648-0400 DEBUG Before test class: class [PersonControllerIT], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:29:00.684-0400 DEBUG Performing dependency injection for test class mansi.safetynetalerts.controller.PersonControllerIT
+2023-05-19T17:29:01.802-0400 INFO Starting PersonControllerIT using Java 17.0.3 with PID 25360 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:29:01.815-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:29:06.190-0400 INFO Tomcat initialized with port(s): 0 (http)
+2023-05-19T17:29:06.227-0400 INFO Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-05-19T17:29:06.229-0400 INFO Starting service [Tomcat]
+2023-05-19T17:29:06.230-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:29:06.563-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:29:06.570-0400 INFO Root WebApplicationContext: initialization completed in 4646 ms
+2023-05-19T17:29:11.775-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:29:12.259-0400 INFO Starting ProtocolHandler ["http-nio-auto-1"]
+2023-05-19T17:29:12.405-0400 INFO Tomcat started on port(s): 50562 (http) with context path ''
+2023-05-19T17:29:12.493-0400 INFO Started PersonControllerIT in 11.715 seconds (process running for 18.761)
+2023-05-19T17:29:15.778-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T17:29:15.779-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T17:29:15.783-0400 INFO Completed initialization in 2 ms
+2023-05-19T17:29:15.868-0400 INFO HTTP GET request received at /person URL
+2023-05-19T17:29:15.879-0400 INFO Person List = [Person{firstName='John', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Person{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Person{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Person{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Person{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Person{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Person{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Person{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Person{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Person{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Person{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Person{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}]
+2023-05-19T17:29:16.671-0400 INFO HTTP PUT request received at /person URL
+2023-05-19T17:29:16.674-0400 INFO Person Updated = Person{firstName='John', lastName='Boyd', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T17:29:16.806-0400 INFO HTTP DELETE request received at /person URL
+2023-05-19T17:29:16.811-0400 INFO Deleted Person = Person{firstName='John', lastName='Boyd', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T17:29:16.872-0400 INFO HTTP POST request received at /person URL
+2023-05-19T17:29:16.874-0400 INFO New Person added = Person{firstName='Mansi', lastName='Patel', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}
+2023-05-19T17:29:16.928-0400 INFO HTTP GET request received at /person URL
+2023-05-19T17:29:16.930-0400 INFO Person List = [Person{firstName='Jacob', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tenley', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Roger', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Felicia', lastName='Boyd', address='1509 Culver St', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Jonanathan', lastName='Marrack', address='29 15th St', city='Culver', zip='97451', phone='841-874-6513', email='drk@email.com'}, Person{firstName='Tessa', lastName='Carman', address='834 Binoc Ave', city='Culver', zip='97451', phone='841-874-6512', email='tenz@email.com'}, Person{firstName='Peter', lastName='Duncan', address='644 Gershwin Cir', city='Culver', zip='97451', phone='841-874-6512', email='jaboyd@email.com'}, Person{firstName='Foster', lastName='Shepard', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6544', email='jaboyd@email.com'}, Person{firstName='Tony', lastName='Cooper', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-6874', email='tcoop@ymail.com'}, Person{firstName='Lily', lastName='Cooper', address='489 Manchester St', city='Culver', zip='97451', phone='841-874-9845', email='lily@email.com'}, Person{firstName='Sophia', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7878', email='soph@email.com'}, Person{firstName='Warren', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='ward@email.com'}, Person{firstName='Zach', lastName='Zemicks', address='892 Downing Ct', city='Culver', zip='97451', phone='841-874-7512', email='zarc@email.com'}, Person{firstName='Reginold', lastName='Walker', address='908 73rd St', city='Culver', zip='97451', phone='841-874-8547', email='reg@email.com'}, Person{firstName='Jamie', lastName='Peters', address='908 73rd St', city='Culver', zip='97451', phone='841-874-7462', email='jpeter@email.com'}, Person{firstName='Ron', lastName='Peters', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-8888', email='jpeter@email.com'}, Person{firstName='Allison', lastName='Boyd', address='112 Steppes Pl', city='Culver', zip='97451', phone='841-874-9888', email='aly@imail.com'}, Person{firstName='Brian', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Shawna', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='ssanw@email.com'}, Person{firstName='Kendrik', lastName='Stelzer', address='947 E. Rose Dr', city='Culver', zip='97451', phone='841-874-7784', email='bstel@email.com'}, Person{firstName='Clive', lastName='Ferguson', address='748 Townings Dr', city='Culver', zip='97451', phone='841-874-6741', email='clivfd@ymail.com'}, Person{firstName='Eric', lastName='Cadigan', address='951 LoneTree Rd', city='Culver', zip='97451', phone='841-874-7458', email='gramps@email.com'}, Person{firstName='Mansi', lastName='Patel', address='6007 Magnolia Lane', city='Tampa', zip='33510', phone='813-461-2500', email='mansi2001.edu@gmail.com'}]
+2023-05-19T17:29:17.007-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.FirestationControllerIT]: FirestationControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:29:17.027-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.FirestationControllerIT
+2023-05-19T17:29:17.100-0400 INFO HTTP DELETE request received at /firestation URL
+2023-05-19T17:29:17.112-0400 INFO deleted Firestation = <200 OK OK,Firestation{address='951 LoneTree Rd', station='2'},[]>
+2023-05-19T17:29:17.173-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:29:17.175-0400 INFO Firestations List = [Firestation{address='1509 Culver St', station='3'}, Firestation{address='29 15th St', station='2'}, Firestation{address='834 Binoc Ave', station='3'}, Firestation{address='644 Gershwin Cir', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='112 Steppes Pl', station='3'}, Firestation{address='489 Manchester St', station='4'}, Firestation{address='892 Downing Ct', station='2'}, Firestation{address='908 73rd St', station='1'}, Firestation{address='112 Steppes Pl', station='4'}, Firestation{address='947 E. Rose Dr', station='1'}, Firestation{address='748 Townings Dr', station='3'}]
+2023-05-19T17:29:17.237-0400 INFO HTTP POST request received at /firestation URL
+2023-05-19T17:29:17.240-0400 INFO Added Firestation = Firestation{address='6007 Magnolia Park', station='8'}
+2023-05-19T17:29:17.309-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:29:17.311-0400 INFO Firestations List = [Firestation{address='1509 Culver St', station='3'}, Firestation{address='29 15th St', station='2'}, Firestation{address='834 Binoc Ave', station='3'}, Firestation{address='644 Gershwin Cir', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='112 Steppes Pl', station='3'}, Firestation{address='489 Manchester St', station='4'}, Firestation{address='892 Downing Ct', station='2'}, Firestation{address='908 73rd St', station='1'}, Firestation{address='112 Steppes Pl', station='4'}, Firestation{address='947 E. Rose Dr', station='1'}, Firestation{address='748 Townings Dr', station='3'}, Firestation{address='6007 Magnolia Park', station='8'}]
+2023-05-19T17:29:17.389-0400 INFO HTTP PUT request received at /firestation URL
+2023-05-19T17:29:17.398-0400 INFO Updated Firestation = Firestation{address='1509 Culver St', station='8'}
+2023-05-19T17:29:17.474-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:29:17.603-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.FireStationControllerTest
+2023-05-19T17:29:17.860-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 25360 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:29:17.868-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:29:20.338-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:29:20.339-0400 INFO Initializing Servlet ''
+2023-05-19T17:29:20.341-0400 INFO Completed initialization in 2 ms
+2023-05-19T17:29:20.432-0400 INFO Started FireStationControllerTest in 2.776 seconds (process running for 26.701)
+2023-05-19T17:29:20.603-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:29:21.153-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:29:21.210-0400 INFO HTTP GET request received at /fire URL
+2023-05-19T17:29:21.302-0400 INFO HTTP GET request received at /fire URL
+2023-05-19T17:29:21.392-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.SafetyNetAlertsApplicationTests]: SafetyNetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:29:21.450-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.SafetyNetAlertsApplicationTests
+2023-05-19T17:29:21.669-0400 INFO Starting SafetyNetAlertsApplicationTests using Java 17.0.3 with PID 25360 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:29:21.678-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:29:24.453-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:29:24.533-0400 INFO Started SafetyNetAlertsApplicationTests in 3.03 seconds (process running for 30.802)
+2023-05-19T17:29:24.554-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.AlertControllerTest]: AlertControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:29:24.563-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.AlertControllerTest
+2023-05-19T17:29:25.763-0400 INFO Starting AlertControllerTest using Java 17.0.3 with PID 25360 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:29:25.776-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:29:26.644-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:29:26.646-0400 INFO Initializing Servlet ''
+2023-05-19T17:29:26.654-0400 INFO Completed initialization in 7 ms
+2023-05-19T17:29:26.669-0400 INFO Started AlertControllerTest in 2.086 seconds (process running for 32.938)
+2023-05-19T17:29:26.689-0400 INFO HTTP GET request received at /childAlert URL
+2023-05-19T17:29:26.723-0400 INFO ChildrenList = [][]
+2023-05-19T17:29:26.763-0400 INFO HTTP GET request received at /childAlert URL
+2023-05-19T17:29:26.765-0400 INFO ChildrenList = [][]
+2023-05-19T17:29:26.792-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.MedicalRecordControllerIT]: MedicalRecordControllerIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:29:26.798-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.MedicalRecordControllerIT
+2023-05-19T17:29:27.286-0400 INFO HTTP PUT request received at /medicalRecord URL
+2023-05-19T17:29:27.308-0400 INFO Updated Medical Record = mansi.safetynetalerts.model.MedicalRecord@19fcb6f0
+2023-05-19T17:29:27.346-0400 INFO HTTP GET request received at /medicalRecord URL
+2023-05-19T17:29:27.347-0400 INFO MedicalRecords List = [mansi.safetynetalerts.model.MedicalRecord@19fcb6f0, mansi.safetynetalerts.model.MedicalRecord@5bc1247d, mansi.safetynetalerts.model.MedicalRecord@f5a702b, mansi.safetynetalerts.model.MedicalRecord@10955564, mansi.safetynetalerts.model.MedicalRecord@b7d70e8, mansi.safetynetalerts.model.MedicalRecord@59cd4f36, mansi.safetynetalerts.model.MedicalRecord@5caa70c, mansi.safetynetalerts.model.MedicalRecord@3f4eeca4, mansi.safetynetalerts.model.MedicalRecord@5fd43195, mansi.safetynetalerts.model.MedicalRecord@6cd361a6, mansi.safetynetalerts.model.MedicalRecord@3c7159f7, mansi.safetynetalerts.model.MedicalRecord@7492b911, mansi.safetynetalerts.model.MedicalRecord@ab4668f, mansi.safetynetalerts.model.MedicalRecord@7d9df82e, mansi.safetynetalerts.model.MedicalRecord@4b95a88b, mansi.safetynetalerts.model.MedicalRecord@2aaedad9, mansi.safetynetalerts.model.MedicalRecord@307511d, mansi.safetynetalerts.model.MedicalRecord@11c995db, mansi.safetynetalerts.model.MedicalRecord@777eb699, mansi.safetynetalerts.model.MedicalRecord@2bdad2bd, mansi.safetynetalerts.model.MedicalRecord@12ecf162, mansi.safetynetalerts.model.MedicalRecord@4fd6d9a9, mansi.safetynetalerts.model.MedicalRecord@4d9e64b4]
+2023-05-19T17:29:27.400-0400 INFO HTTP POST request received at /medicalRecord URL
+2023-05-19T17:29:27.403-0400 INFO New Medical Record = mansi.safetynetalerts.model.MedicalRecord@336b14aa
+2023-05-19T17:29:27.437-0400 INFO HTTP DELETE request received at /medicalRecord URL
+2023-05-19T17:29:27.451-0400 INFO Deleted Medical Record = mansi.safetynetalerts.model.MedicalRecord@19fcb6f0
+2023-05-19T17:29:27.485-0400 INFO HTTP GET request received at /medicalRecord URL
+2023-05-19T17:29:27.485-0400 INFO MedicalRecords List = [mansi.safetynetalerts.model.MedicalRecord@5bc1247d, mansi.safetynetalerts.model.MedicalRecord@f5a702b, mansi.safetynetalerts.model.MedicalRecord@10955564, mansi.safetynetalerts.model.MedicalRecord@b7d70e8, mansi.safetynetalerts.model.MedicalRecord@59cd4f36, mansi.safetynetalerts.model.MedicalRecord@5caa70c, mansi.safetynetalerts.model.MedicalRecord@3f4eeca4, mansi.safetynetalerts.model.MedicalRecord@5fd43195, mansi.safetynetalerts.model.MedicalRecord@6cd361a6, mansi.safetynetalerts.model.MedicalRecord@3c7159f7, mansi.safetynetalerts.model.MedicalRecord@7492b911, mansi.safetynetalerts.model.MedicalRecord@ab4668f, mansi.safetynetalerts.model.MedicalRecord@7d9df82e, mansi.safetynetalerts.model.MedicalRecord@4b95a88b, mansi.safetynetalerts.model.MedicalRecord@2aaedad9, mansi.safetynetalerts.model.MedicalRecord@307511d, mansi.safetynetalerts.model.MedicalRecord@11c995db, mansi.safetynetalerts.model.MedicalRecord@777eb699, mansi.safetynetalerts.model.MedicalRecord@2bdad2bd, mansi.safetynetalerts.model.MedicalRecord@12ecf162, mansi.safetynetalerts.model.MedicalRecord@4fd6d9a9, mansi.safetynetalerts.model.MedicalRecord@4d9e64b4, mansi.safetynetalerts.model.MedicalRecord@336b14aa]
+2023-05-19T17:30:19.588-0400 INFO Starting SafetyNetAlertsApplication using Java 17.0.3 with PID 28300 (C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts)
+2023-05-19T17:30:19.607-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:30:19.806-0400 INFO Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-19T17:30:19.807-0400 INFO For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-19T17:30:25.024-0400 INFO Tomcat initialized with port(s): 8080 (http)
+2023-05-19T17:30:25.057-0400 INFO Initializing ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:30:25.061-0400 INFO Starting service [Tomcat]
+2023-05-19T17:30:25.062-0400 INFO Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-19T17:30:25.345-0400 INFO Initializing Spring embedded WebApplicationContext
+2023-05-19T17:30:25.355-0400 INFO Root WebApplicationContext: initialization completed in 5537 ms
+2023-05-19T17:30:29.684-0400 INFO LiveReload server is running on port 35729
+2023-05-19T17:30:29.719-0400 INFO Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-19T17:30:29.969-0400 INFO Starting ProtocolHandler ["http-nio-8080"]
+2023-05-19T17:30:30.108-0400 INFO Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-19T17:30:30.185-0400 INFO Started SafetyNetAlertsApplication in 11.85 seconds (process running for 15.684)
+2023-05-19T17:30:41.973-0400 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-19T17:30:41.975-0400 INFO Initializing Servlet 'dispatcherServlet'
+2023-05-19T17:30:41.980-0400 INFO Completed initialization in 4 ms
+2023-05-19T17:30:42.163-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:30:42.198-0400 INFO Person List[{"firstName":"Roger","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Ron","lastName":"Peters","address":"112 Steppes Pl","phoneNum":"841-874-8888"}, {"firstName":"Tony","lastName":"Cooper","address":"112 Steppes Pl","phoneNum":"841-874-6874"}, {"firstName":"Foster","lastName":"Shepard","address":"748 Townings Dr","phoneNum":"841-874-6544"}, {"firstName":"John","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Allison","lastName":"Boyd","address":"112 Steppes Pl","phoneNum":"841-874-9888"}, {"firstName":"Tenley","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Clive","lastName":"Ferguson","address":"748 Townings Dr","phoneNum":"841-874-6741"}, {"firstName":"Jacob","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6513"}, {"firstName":"Felicia","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6544"}, {"firstName":"Tessa","lastName":"Carman","address":"834 Binoc Ave","phoneNum":"841-874-6512"}, {"children":3,"adults":8}]
+2023-05-19T17:31:10.347-0400 DEBUG Neither @ContextConfiguration nor @ContextHierarchy found for test class [FireStationControllerTest]: using SpringBootContextLoader
+2023-05-19T17:31:10.362-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:31:10.364-0400 INFO Could not detect default configuration classes for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: FireStationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-19T17:31:10.613-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:31:10.945-0400 DEBUG Identified candidate component class: file [C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts\target\classes\mansi\safetynetalerts\SafetyNetAlertsApplication.class]
+2023-05-19T17:31:10.950-0400 INFO Found @SpringBootConfiguration mansi.safetynetalerts.SafetyNetAlertsApplication for test class mansi.safetynetalerts.controller.FireStationControllerTest
+2023-05-19T17:31:10.979-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:31:10.983-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:31:10.988-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:31:10.992-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:31:12.359-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 13624 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:31:12.372-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:31:19.072-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:31:19.077-0400 INFO Initializing Servlet ''
+2023-05-19T17:31:19.089-0400 INFO Completed initialization in 5 ms
+2023-05-19T17:31:19.206-0400 INFO Started FireStationControllerTest in 8.014 seconds (process running for 14.758)
+2023-05-19T17:31:19.630-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:34:33.906-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:34:34.116-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:34:34.176-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:34:34.182-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:34:34.191-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:34:34.196-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:34:35.906-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 20100 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:34:35.955-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:34:40.719-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:34:40.727-0400 INFO Initializing Servlet ''
+2023-05-19T17:34:40.744-0400 INFO Completed initialization in 7 ms
+2023-05-19T17:34:40.816-0400 INFO Started FireStationControllerTest in 6.482 seconds (process running for 13.128)
+2023-05-19T17:35:35.555-0400 INFO HTTP GET request received at /firestation URL
+2023-05-19T17:35:35.573-0400 INFO Person List[{"firstName":"Roger","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Ron","lastName":"Peters","address":"112 Steppes Pl","phoneNum":"841-874-8888"}, {"firstName":"Tony","lastName":"Cooper","address":"112 Steppes Pl","phoneNum":"841-874-6874"}, {"firstName":"Foster","lastName":"Shepard","address":"748 Townings Dr","phoneNum":"841-874-6544"}, {"firstName":"John","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Allison","lastName":"Boyd","address":"112 Steppes Pl","phoneNum":"841-874-9888"}, {"firstName":"Tenley","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6512"}, {"firstName":"Clive","lastName":"Ferguson","address":"748 Townings Dr","phoneNum":"841-874-6741"}, {"firstName":"Jacob","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6513"}, {"firstName":"Felicia","lastName":"Boyd","address":"1509 Culver St","phoneNum":"841-874-6544"}, {"firstName":"Tessa","lastName":"Carman","address":"834 Binoc Ave","phoneNum":"841-874-6512"}, {"children":3,"adults":8}]
+2023-05-19T17:37:01.638-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:37:01.853-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:37:01.910-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:37:01.918-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:37:01.933-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:37:01.938-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:37:03.938-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 25368 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:37:03.952-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:37:10.564-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:37:10.567-0400 INFO Initializing Servlet ''
+2023-05-19T17:37:10.594-0400 INFO Completed initialization in 9 ms
+2023-05-19T17:37:10.725-0400 INFO Started FireStationControllerTest in 8.553 seconds (process running for 17.096)
+2023-05-19T17:38:03.984-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:38:04.239-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:38:04.339-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:38:04.346-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:38:04.354-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:38:04.359-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:38:06.029-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 27476 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:38:06.047-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:38:13.177-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:38:13.183-0400 INFO Initializing Servlet ''
+2023-05-19T17:38:13.218-0400 INFO Completed initialization in 17 ms
+2023-05-19T17:38:13.363-0400 INFO Started FireStationControllerTest in 8.806 seconds (process running for 15.689)
+2023-05-19T17:38:13.380-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:38:13.990-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:38:14.096-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:38:14.102-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:38:14.111-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:38:14.116-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:38:16.589-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 11692 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:38:16.612-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:38:22.752-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:38:22.756-0400 INFO Initializing Servlet ''
+2023-05-19T17:38:22.775-0400 INFO Completed initialization in 5 ms
+2023-05-19T17:38:22.931-0400 INFO Started FireStationControllerTest in 8.526 seconds (process running for 16.941)
+2023-05-19T17:41:14.786-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:41:15.010-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:41:15.124-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:41:15.128-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:41:15.133-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:41:15.138-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:41:16.755-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 29296 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:41:16.774-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:41:22.127-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:41:22.128-0400 INFO Initializing Servlet ''
+2023-05-19T17:41:22.146-0400 INFO Completed initialization in 4 ms
+2023-05-19T17:41:22.367-0400 INFO Started FireStationControllerTest in 7.055 seconds (process running for 13.307)
+2023-05-19T17:42:09.552-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:42:09.780-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:42:09.865-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:42:09.869-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:42:09.874-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:42:09.883-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:42:11.619-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 17948 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:42:11.636-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:42:18.077-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:42:18.079-0400 INFO Initializing Servlet ''
+2023-05-19T17:42:18.098-0400 INFO Completed initialization in 5 ms
+2023-05-19T17:42:18.351-0400 INFO Started FireStationControllerTest in 8.294 seconds (process running for 15.151)
+2023-05-19T17:42:42.038-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:42:42.339-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:42:42.437-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:42:42.442-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:42:42.449-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:42:42.453-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:42:44.725-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 13384 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:42:44.742-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:42:50.066-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:42:50.368-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:42:50.480-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:42:50.488-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:42:50.498-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:42:50.504-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:42:52.536-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:42:52.541-0400 INFO Initializing Servlet ''
+2023-05-19T17:42:52.560-0400 INFO Completed initialization in 7 ms
+2023-05-19T17:42:52.690-0400 INFO Started FireStationControllerTest in 10.065 seconds (process running for 17.169)
+2023-05-19T17:42:53.111-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 2676 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:42:53.131-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:42:59.611-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:42:59.613-0400 INFO Initializing Servlet ''
+2023-05-19T17:42:59.636-0400 INFO Completed initialization in 8 ms
+2023-05-19T17:42:59.800-0400 INFO Started FireStationControllerTest in 8.962 seconds (process running for 17.224)
+2023-05-19T17:44:22.557-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:44:22.786-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:44:22.905-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:44:22.909-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:44:22.913-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:44:22.917-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:44:24.557-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 18984 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:44:24.583-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:44:31.299-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:44:31.299-0400 INFO Initializing Servlet ''
+2023-05-19T17:44:31.314-0400 INFO Completed initialization in 3 ms
+2023-05-19T17:44:31.451-0400 INFO Started FireStationControllerTest in 8.38 seconds (process running for 14.879)
+2023-05-19T17:45:43.711-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:45:43.965-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:45:44.062-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:45:44.066-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:45:44.073-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:45:44.076-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:45:44.129-0400 DEBUG Performing dependency injection for test class mansi.safetynetalerts.controller.FireStationControllerTest
+2023-05-19T17:45:45.789-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 27160 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:45:45.810-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:45:52.154-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:45:52.157-0400 INFO Initializing Servlet ''
+2023-05-19T17:45:52.171-0400 INFO Completed initialization in 5 ms
+2023-05-19T17:45:52.274-0400 INFO Started FireStationControllerTest in 8.016 seconds (process running for 13.919)
+2023-05-19T17:47:47.528-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:47:47.698-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:47:47.744-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:47:47.757-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:47:47.759-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:47:47.765-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:47:47.800-0400 DEBUG Performing dependency injection for test class mansi.safetynetalerts.controller.FireStationControllerTest
+2023-05-19T17:47:48.736-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 29432 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:47:48.751-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:47:52.447-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:47:52.447-0400 INFO Initializing Servlet ''
+2023-05-19T17:47:52.465-0400 INFO Completed initialization in 8 ms
+2023-05-19T17:47:52.542-0400 INFO Started FireStationControllerTest in 4.669 seconds (process running for 9.014)
+2023-05-19T17:48:47.889-0400 DEBUG Could not detect default resource locations for test class [mansi.safetynetalerts.controller.FireStationControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-19T17:48:48.069-0400 DEBUG Using ContextCustomizers for test class [FireStationControllerTest]: [ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, DisableAutoConfigurationContextCustomizer, DisableObservabilityContextCustomizer, TypeExcludeFiltersContextCustomizer, PropertyMappingContextCustomizer, Customizer]
+2023-05-19T17:48:48.129-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2023-05-19T17:48:48.134-0400 DEBUG Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2023-05-19T17:48:48.134-0400 DEBUG Using TestExecutionListeners for test class [FireStationControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, EventPublishingTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2023-05-19T17:48:48.147-0400 DEBUG Before test class: class [FireStationControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+2023-05-19T17:48:48.185-0400 DEBUG Performing dependency injection for test class mansi.safetynetalerts.controller.FireStationControllerTest
+2023-05-19T17:48:49.219-0400 INFO Starting FireStationControllerTest using Java 17.0.3 with PID 28848 (started by mansi in C:\Users\mansi\Desktop\SafetyNetAlerts\SafetyNetAlerts)
+2023-05-19T17:48:49.231-0400 INFO No active profile set, falling back to 1 default profile: "default"
+2023-05-19T17:48:52.990-0400 INFO Initializing Spring TestDispatcherServlet ''
+2023-05-19T17:48:52.994-0400 INFO Initializing Servlet ''
+2023-05-19T17:48:53.006-0400 INFO Completed initialization in 0 ms
+2023-05-19T17:48:53.080-0400 INFO Started FireStationControllerTest in 4.785 seconds (process running for 9.078)

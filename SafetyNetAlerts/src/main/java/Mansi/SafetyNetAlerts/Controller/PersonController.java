@@ -13,6 +13,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Handles Person Endpoints
+ */
 @RestController
 public class PersonController {
 
@@ -20,21 +23,19 @@ public class PersonController {
 
     private static Logger logger = LoggerFactory.getLogger(PersonController.class);
 
-
     public PersonController(ReadJson readJson) throws IOException {
 
-        this.personList = ReadJson.returnPersonsList();
+        this.personList = readJson.returnPersonsList();
     }
 
 
     /**
      * Get Persons List
      *
-     * @return
-     * @throws IOException
+     * @return PersonsList
      */
     @GetMapping("/person")
-    public List<Person> getPersons() throws IOException {
+    public List<Person> getPersons() {
 
         logger.info("HTTP GET request received at /person URL");
 
@@ -46,11 +47,10 @@ public class PersonController {
 
 
     /**
-     * Delete a Person
+     * Add a new a Person
      *
-     * @param newPerson
-     * @return
-     * @throws IOException
+     * @param newPerson personBeingAddes
+     * @return newPerson
      */
     @PostMapping("/person")
     @ResponseBody
@@ -70,10 +70,10 @@ public class PersonController {
     /**
      * Update a person's info
      *
-     * @param firstName
-     * @param lastName
-     * @param personEntered
-     * @return
+     * @param firstName     personFirstName
+     * @param lastName      personLastName
+     * @param personEntered fieldsBeingUpdated
+     * @return updatedPerson
      */
     @PutMapping("/person/{firstName}/{lastName}")
     @ResponseBody
@@ -107,9 +107,9 @@ public class PersonController {
     /**
      * Delete a Person
      *
-     * @param firstName
-     * @param lastName
-     * @return
+     * @param firstName personFirstName
+     * @param lastName  personLastName
+     * @return deletedPerson
      */
     @DeleteMapping("/person/{firstName}/{lastName}")
     public ResponseEntity<Object> deletePerson(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
