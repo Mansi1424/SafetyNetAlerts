@@ -14,6 +14,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Handles MedicalRecord Endpoints
+ */
 @RestController
 public class MedicalRecordController {
 
@@ -67,11 +70,9 @@ public class MedicalRecordController {
     /**
      * Update MedicalRecord
      *
-     * @param firstName
-     * @param lastName
-     * @param record
-     * @return
-     * @throws IOException
+     * @param firstName personFirstName
+     * @param lastName personLastName
+     * @return UpdatedRecord
      */
     @PutMapping("/medicalRecord/{firstName}/{lastName}")
     @ResponseBody
@@ -103,10 +104,9 @@ public class MedicalRecordController {
     /**
      * Delete Medical Record
      *
-     * @param firstName
-     * @param lastName
-     * @return
-     * @throws IOException
+     * @param firstName personFirstName
+     * @param lastName personLastName
+     * @return deleted MedicalRecord
      */
     @DeleteMapping("/medicalRecord/{firstName}/{lastName}")
     @ResponseBody

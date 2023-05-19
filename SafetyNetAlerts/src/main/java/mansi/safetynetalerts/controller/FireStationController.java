@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Handle Firestation Endpoints
+ * Handle Firestation Endpoints and firestation URLs
  */
 @RestController
 public class FireStationController {
@@ -77,7 +77,7 @@ public class FireStationController {
     /**
      * Update firestation station
      *
-     * @param address       address firestation serves
+     * @param address address firestation serves
      * @param stationNumber number of firestation
      * @return firestation
      */
@@ -135,6 +135,13 @@ public class FireStationController {
         return response;
     }
 
+
+    /**
+     * 1st URL - List of people by firestation
+     *
+     * @param stationNumber numberOfStation
+     * @return list of people (children and adults) by stationNumber
+     */
     @GetMapping("/firestation")
     @ResponseBody
     public ResponseEntity<Object> getPerson(@RequestParam String stationNumber) throws ParseException {
@@ -217,5 +224,117 @@ public class FireStationController {
     }
 
 
+    /**
+     * 4th URL: /fire
+     *
+     * @param address firestationAddress
+     * @return peopleListAndStationNum
+     */
+    @GetMapping("/fire")
+    @ResponseBody
+    public ResponseEntity<Object> getFire(@RequestParam String address) throws ParseException {
+        JsonObject responseJsonObject = new JsonObject();
+
+        List<Firestation> filteredStream = firestationList.stream()
+                .filter(firestation -> firestation.getAddress().equals(address)).toList();
+
+        // If address not found return empty jsonObject
+        if (filteredStream.isEmpty()) {
+            List<JsonObject> emptyList = new ArrayList<>();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
+        }
+
+        // Find person which matches those addresses
+        List<Person> matchingPersons = new ArrayList<>();
+        for (Firestation firestation : filteredStream) {
+            String stationAddress = firestation.getAddress();
+            for (Person person : personList) {
+                if (Objects.equals(person.getAddress(), stationAddress) && HelperMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
+                    Person matchedPerson = new Person(person.getFirstName(), person.getLastName(), person.getAddress(), person.getPhone());
+                    matchingPersons.add(matchedPerson);
+
+                }
+            }
+        }
+
+        // Make map from matching persons
+        Map<String, Person> peopleMap = matchingPersons.stream()
+                .collect(Collectors.toMap(Person::getFirstName, person -> person));
+
+        List<JsonObject> filteredPersonList = new ArrayList<>();
+
+        // Add stationNumber to list of Persons Objects
+        JsonObject stationNumber = new JsonObject();
+        stationNumber.addProperty("stationNum", filteredStream.get(0).getStation());
+        filteredPersonList.add(stationNumber);
+
+        // Loop through map and get wanted fields in PersonObject then save to filteredPersonList
+        for (Map.Entry<String, Person> entry : peopleMap.entrySet()) {
+            Person person = entry.getValue();
+            MedicalRecord record = findRecordByName(person.getFirstName(), person.getLastName());
+            String dob = record.getBirthdate();
+            String personAge = String.valueOf(HelperMethods.getAge(dob));
+            List<String> medications = record.getMedications();
+            List<String> allergies = record.getAllergies();
+            JsonArray medicationsArray = new JsonArray();
+            JsonArray allergiesArray = new JsonArray();
+            // Turn medications to JsonArray
+            for (String medication : medications) {
+                medicationsArray.add(medication);
+            }
+            for (String allergy : allergies) {
+                allergiesArray.add(allergy);
+            }
+            ;
+            JsonObject personJson = new JsonObject();
+            personJson.addProperty("firstName", person.getFirstName());
+            personJson.addProperty("lastName", person.getLastName());
+            personJson.addProperty("phoneNum", person.getPhone());
+            personJson.addProperty("age", personAge);
+            personJson.add("medications", medicationsArray);
+            personJson.add("allergies", allergiesArray);
+            filteredPersonList.add(personJson);
+        }
+
+
+
+        // Turn list of persons to JsonArray to be a part of a JsonObject
+        JsonArray personArray = new JsonArray();
+        for (JsonObject person : filteredPersonList) {
+            personArray.add(person);
+        }
+
+        responseJsonObject.add("people", personArray);
+        return ResponseEntity.of(Optional.of(responseJsonObject));
+
+    }
+
+
+    /**
+     * Method used by /fire url to get MedRecord by first/lastName
+     *
+     * @param firstName firstNameOfPerson
+     * @param lastName lastNameOfPerson
+     * @return MedicalRecord MedicalRecordOfPerson
+     */
+    public MedicalRecord findRecordByName(String firstName, String lastName) throws ParseException {
+        List<Person> filteredStream = personList.stream()
+                .filter(person -> person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)).toList();
+        int age = 0;
+
+        MedicalRecord matchingRecord = null;
+        for (Person person : filteredStream) {
+            for (MedicalRecord medicalRecord : medicalRecordList) {
+                if (Objects.equals(medicalRecord.getFirstName(), person.getFirstName())
+                        && Objects.equals(medicalRecord.getLastName(), person.getLastName())) {
+                    matchingRecord = medicalRecord;
+                }
+            }
+        }
+
+        return matchingRecord;
+
+
+    }
 }
 

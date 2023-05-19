@@ -1,0 +1,62 @@
+{
+  "people": [
+    {
+      "stationNum": "3"
+    },
+    {
+      "firstName": "Roger",
+      "lastName": "Boyd",
+      "phoneNum": "841-874-6512",
+      "age": "5",
+      "medications": [],
+      "allergies": []
+    },
+    {
+      "firstName": "John",
+      "lastName": "Boyd",
+      "phoneNum": "841-874-6512",
+      "age": "39",
+      "medications": [
+        "aznol:350mg",
+        "hydrapermazol:100mg"
+      ],
+      "allergies": [
+        "nillacilan"
+      ]
+    },
+    {
+      "firstName": "Tenley",
+      "lastName": "Boyd",
+      "phoneNum": "841-874-6512",
+      "age": "11",
+      "medications": [],
+      "allergies": [
+        "peanut"
+      ]
+    },
+    {
+      "firstName": "Jacob",
+      "lastName": "Boyd",
+      "phoneNum": "841-874-6513",
+      "age": "34",
+      "medications": [
+        "pharmacol:5000mg",
+        "terazine:10mg",
+        "noznazol:250mg"
+      ],
+      "allergies": []
+    },
+    {
+      "firstName": "Felicia",
+      "lastName": "Boyd",
+      "phoneNum": "841-874-6544",
+      "age": "37",
+      "medications": [
+        "tetracyclaz:650mg"
+      ],
+      "allergies": [
+        "xilliathal"
+      ]
+    }
+  ]
+}

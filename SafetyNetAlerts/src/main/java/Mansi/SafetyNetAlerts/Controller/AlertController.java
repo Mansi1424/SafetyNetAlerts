@@ -23,6 +23,9 @@ import java.text.ParseException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Handles ChildAlert and PhoneAlert URLs
+ */
 @RestController
 public class AlertController {
 
@@ -38,6 +41,13 @@ public class AlertController {
         this.medicalRecordList = ReadJson.returnMedicalRecordsList();
     }
 
+
+    /**
+     * 2nd Url: ChildAlert URL
+     *
+     * @param address Homeaddress
+     * @return listOfChildrenAtAddress
+     */
     @GetMapping("/childAlert")
     @ResponseBody
     public ResponseEntity<Object> getChildAlert(@RequestParam String address) throws ParseException {
@@ -68,7 +78,6 @@ public class AlertController {
                 }
             }
         }
-
         // Get Children
         Map<String, MedicalRecord> childrenMap = children.stream()
                 .collect(Collectors.toMap(MedicalRecord::getFirstName, person -> person));
@@ -121,6 +130,12 @@ public class AlertController {
     }
 
 
+    /**
+     * 3rd URL: phoneAlert URL
+     *
+     * @param firestation_number stationNumber
+     * @return Phone numbers of People matched to stationNumber
+     */
     @GetMapping("/phoneAlert")
     public ResponseEntity<Object> getPhoneAlert(@RequestParam(name = "firestation") String firestation_number) {
 
@@ -155,7 +170,6 @@ public class AlertController {
         gson.toJson(phoneNumbers);
 
         return ResponseEntity.of(Optional.of(phoneNumbers));
-
 
     }
 

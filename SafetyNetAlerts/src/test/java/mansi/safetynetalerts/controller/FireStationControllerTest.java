@@ -48,13 +48,33 @@ public class FireStationControllerTest {
     }
 
     @Test
-    public void testGetPeopleByFirestationURLReturnsCorrectResponse() throws Exception {
+    public void testGetPeopleByFirestationURLReturnsResponse() throws Exception {
         String expectedResult = ReadJsonFileForTests.readJsonFile("src/test/resources/GetPeopleByFirestationResult.json");
         String stationNum = "1";
         mockMvc.perform(get("/firestation").param( "stationNumber",stationNum)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().json(expectedResult));
+    }
+
+    @Test
+    public void testFireUrlWhenAddressNotFoundReturns404() throws Exception {
+        String address = "WrongAddress";
+        mockMvc.perform(get("/fire").param("address", address)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
+
+    }
+
+    @Test
+    public void testFireUrlReturnsResponse() throws Exception {
+        String address = "1509 Culver St";
+        String expectedResult = ReadJsonFileForTests.readJsonFile("src/test/resources/GetFireUrlResult.json");
+        mockMvc.perform(get("/fire").param("address", address)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().json(expectedResult));
+
     }
 
 }
