@@ -1,8 +1,6 @@
 {
+  "stationNum": "3",
   "people": [
-    {
-      "stationNum": "3"
-    },
     {
       "firstName": "Roger",
       "lastName": "Boyd",

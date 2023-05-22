@@ -31,14 +31,17 @@ public class FireStationController {
     private final List<Person> personList;
     private final List<MedicalRecord> medicalRecordList;
 
+    private final HelperMethods helperMethods;
+
 
     private static final Logger logger = LoggerFactory.getLogger(FireStationController.class);
 
-    public FireStationController(ReadJson readJson) throws IOException {
+    public FireStationController(ReadJson readJson, HelperMethods helperMethods) throws IOException {
 
         this.firestationList = readJson.returnFirestationsList();
         this.personList = readJson.returnPersonsList();
         this.medicalRecordList = readJson.returnMedicalRecordsList();
+        this.helperMethods = helperMethods;
     }
 
 
@@ -163,7 +166,7 @@ public class FireStationController {
         for (Firestation firestation : filteredStream) {
             String stationAddress = firestation.getAddress();
             for (Person person : personList) {
-                if (Objects.equals(person.getAddress(), stationAddress) && HelperMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
+                if (Objects.equals(person.getAddress(), stationAddress) && helperMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
                     Person matchedPerson = new Person(person.getFirstName(), person.getLastName(), person.getAddress(), person.getPhone());
                     matchingPersons.add(matchedPerson);
 
@@ -179,7 +182,7 @@ public class FireStationController {
             for (MedicalRecord medicalRecord : medicalRecordList) {
                 if (Objects.equals(medicalRecord.getFirstName(), matchedPerson.getFirstName())) {
                     String personDob = medicalRecord.getBirthdate();
-                    age = HelperMethods.getAge(personDob);
+                    age = helperMethods.getAge(personDob);
 
                     if (age < 18) {
                         children++;
@@ -254,7 +257,7 @@ public class FireStationController {
         for (Firestation firestation : filteredStream) {
             String stationAddress = firestation.getAddress();
             for (Person person : personList) {
-                if (Objects.equals(person.getAddress(), stationAddress) && HelperMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
+                if (Objects.equals(person.getAddress(), stationAddress) && helperMethods.containsPersonWithName(matchingPersons, person.getFirstName())) {
                     Person matchedPerson = new Person(person.getFirstName(), person.getLastName(), person.getAddress(), person.getPhone());
                     matchingPersons.add(matchedPerson);
 
@@ -276,9 +279,9 @@ public class FireStationController {
         // Loop through map and get wanted fields in PersonObject then save to filteredPersonList
         for (Map.Entry<String, Person> entry : peopleMap.entrySet()) {
             Person person = entry.getValue();
-            MedicalRecord record = findRecordByName(person.getFirstName(), person.getLastName());
+            MedicalRecord record = helperMethods.findRecordByName(person.getFirstName(), person.getLastName());
             String dob = record.getBirthdate();
-            String personAge = String.valueOf(HelperMethods.getAge(dob));
+            String personAge = String.valueOf(helperMethods.getAge(dob));
             List<String> medications = record.getMedications();
             List<String> allergies = record.getAllergies();
             JsonArray medicationsArray = new JsonArray();
@@ -322,24 +325,24 @@ public class FireStationController {
      * @param lastName  lastNameOfPerson
      * @return MedicalRecord MedicalRecordOfPerson
      */
-    public MedicalRecord findRecordByName(String firstName, String lastName) throws ParseException {
-        List<Person> filteredStream = personList.stream()
-                .filter(person -> person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)).toList();
-        int age = 0;
-
-        MedicalRecord matchingRecord = null;
-        for (Person person : filteredStream) {
-            for (MedicalRecord medicalRecord : medicalRecordList) {
-                if (Objects.equals(medicalRecord.getFirstName(), person.getFirstName())
-                        && Objects.equals(medicalRecord.getLastName(), person.getLastName())) {
-                    matchingRecord = medicalRecord;
-                }
-            }
-        }
-
-        return matchingRecord;
-
-
-    }
+//    public MedicalRecord findRecordByName(String firstName, String lastName) throws ParseException {
+//        List<Person> filteredStream = personList.stream()
+//                .filter(person -> person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)).toList();
+//        int age = 0;
+//
+//        MedicalRecord matchingRecord = null;
+//        for (Person person : filteredStream) {
+//            for (MedicalRecord medicalRecord : medicalRecordList) {
+//                if (Objects.equals(medicalRecord.getFirstName(), person.getFirstName())
+//                        && Objects.equals(medicalRecord.getLastName(), person.getLastName())) {
+//                    matchingRecord = medicalRecord;
+//                }
+//            }
+//        }
+//
+//        return matchingRecord;
+//
+//
+//    }
 }
 

@@ -11,6 +11,7 @@ import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,12 +34,16 @@ public class AlertController {
     private final List<MedicalRecord> medicalRecordList;
     private final List<Firestation> firestationList;
 
+    private final HelperMethods helperMethods;
+
     private static final Logger logger = LoggerFactory.getLogger(AlertController.class);
 
-    public AlertController(ReadJson readJson) throws IOException {
+    @Autowired
+    public AlertController(ReadJson readJson, HelperMethods helperMethods) throws IOException {
         this.personList = readJson.returnPersonsList();
         this.firestationList = readJson.returnFirestationsList();
         this.medicalRecordList = readJson.returnMedicalRecordsList();
+        this.helperMethods = helperMethods;
     }
 
 
@@ -68,7 +73,7 @@ public class AlertController {
             for (MedicalRecord matchedRecord : medicalRecordList) {
                 if (Objects.equals(matchedRecord.getFirstName(), person.getFirstName())) {
                     String personDob = matchedRecord.getBirthdate();
-                    age = HelperMethods.getAge(personDob);
+                    age = helperMethods.getAge(personDob);
 
                     if (age < 18) {
                         children.add(matchedRecord);
@@ -89,7 +94,7 @@ public class AlertController {
             JsonObject medRecordJson = new JsonObject();
             medRecordJson.addProperty("firstName", record.getFirstName());
             medRecordJson.addProperty("lastName", record.getLastName());
-            medRecordJson.addProperty("age", HelperMethods.getAge(record.getBirthdate()));
+            medRecordJson.addProperty("age", helperMethods.getAge(record.getBirthdate()));
             filteredChildrenList.add(medRecordJson);
         }
 

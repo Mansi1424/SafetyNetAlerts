@@ -1,13 +1,14 @@
 package mansi.safetynetalerts.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mansi.safetynetalerts.helper.HelperMethods;
 import mansi.safetynetalerts.helper.ReadJsonFileForTests;
 import mansi.safetynetalerts.jsontopojo.EmptyJsonBody;
 import mansi.safetynetalerts.jsontopojo.ReadJson;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -16,6 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(AlertController.class)
+@Import({ReadJson.class, HelperMethods.class})
 public class AlertControllerTest {
 
     @Autowired
@@ -24,10 +26,6 @@ public class AlertControllerTest {
 
     @Autowired
     private ObjectMapper objectMapper;
-
-    @MockBean
-    ReadJson readJson;
-
 
 
     @Test
