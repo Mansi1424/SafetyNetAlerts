@@ -233,7 +233,7 @@ public class FireStationController {
     /**
      * 4th URL: /fire
      *
-     * @param address firestationAddress
+     * @param address fireStation Address
      * @return peopleListAndStationNum
      */
     @GetMapping("/fire")
