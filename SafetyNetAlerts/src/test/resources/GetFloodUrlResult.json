@@ -1,0 +1,127 @@
+{
+  "644 Gershwin Cir": [
+    {
+      "firstName": "Peter",
+      "lastName": "Duncan",
+      "phoneNum": "841-874-6512",
+      "age": "22",
+      "medications": [],
+      "allergies": [
+        "shellfish"
+      ]
+    }
+  ],
+  "908 73rd St": [
+    {
+      "firstName": "Jamie",
+      "lastName": "Peters",
+      "phoneNum": "841-874-7462",
+      "age": "41",
+      "medications": [],
+      "allergies": []
+    },
+    {
+      "firstName": "Reginold",
+      "lastName": "Walker",
+      "phoneNum": "841-874-8547",
+      "age": "43",
+      "medications": [
+        "thradox:700mg"
+      ],
+      "allergies": [
+        "illisoxian"
+      ]
+    }
+  ],
+  "947 E. Rose Dr": [
+    {
+      "firstName": "Brian",
+      "lastName": "Stelzer",
+      "phoneNum": "841-874-7784",
+      "age": "47",
+      "medications": [
+        "ibupurin:200mg",
+        "hydrapermazol:400mg"
+      ],
+      "allergies": [
+        "nillacilan"
+      ]
+    },
+    {
+      "firstName": "Shawna",
+      "lastName": "Stelzer",
+      "phoneNum": "841-874-7784",
+      "age": "42",
+      "medications": [],
+      "allergies": []
+    },
+    {
+      "firstName": "Kendrik",
+      "lastName": "Stelzer",
+      "phoneNum": "841-874-7784",
+      "age": "9",
+      "medications": [
+        "noxidian:100mg",
+        "pharmacol:2500mg"
+      ],
+      "allergies": []
+    }
+  ],
+  "29 15th St": [
+    {
+      "firstName": "Jonanathan",
+      "lastName": "Marrack",
+      "phoneNum": "841-874-6513",
+      "age": "34",
+      "medications": [],
+      "allergies": []
+    }
+  ],
+  "892 Downing Ct": [
+    {
+      "firstName": "Warren",
+      "lastName": "Zemicks",
+      "phoneNum": "841-874-7512",
+      "age": "38",
+      "medications": [],
+      "allergies": []
+    },
+    {
+      "firstName": "Zach",
+      "lastName": "Zemicks",
+      "phoneNum": "841-874-7512",
+      "age": "6",
+      "medications": [],
+      "allergies": []
+    },
+    {
+      "firstName": "Sophia",
+      "lastName": "Zemicks",
+      "phoneNum": "841-874-7878",
+      "age": "35",
+      "medications": [
+        "aznol:60mg",
+        "hydrapermazol:900mg",
+        "pharmacol:5000mg",
+        "terazine:500mg"
+      ],
+      "allergies": [
+        "peanut",
+        "shellfish",
+        "aznol"
+      ]
+    }
+  ],
+  "951 LoneTree Rd": [
+    {
+      "firstName": "Eric",
+      "lastName": "Cadigan",
+      "phoneNum": "841-874-7458",
+      "age": "77",
+      "medications": [
+        "tradoxidine:400mg"
+      ],
+      "allergies": []
+    }
+  ]
+}

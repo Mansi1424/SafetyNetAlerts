@@ -3,12 +3,13 @@ package mansi.safetynetalerts.controller;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import mansi.safetynetalerts.helper.HelperMethods;
+import mansi.safetynetalerts.jsontopojo.EmptyJsonBody;
 import mansi.safetynetalerts.jsontopojo.ReadJson;
 import mansi.safetynetalerts.model.Firestation;
 import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
-import org.intellij.lang.annotations.JdkConstants;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,23 +41,29 @@ public class FloodController {
         this.helperMethods = helperMethods;
     }
 
+    /**
+     * 5th URL /flood/stations
+     *
+     * @param stations listOfStations
+     * @return People By Household
+     */
     @GetMapping("/flood")
     @ResponseBody
     public ResponseEntity<Object> getFloodInfo(@RequestParam List<String> stations) throws ParseException {
 
         JsonObject responseJsonObject = new JsonObject();
 
-        List<Firestation> firestationsFilteredStream = firestationList;
+        List<Firestation> firestationsFilteredStream = new ArrayList<>();
         for (String station : stations) {
-            firestationsFilteredStream = firestationList.stream()
+            List<Firestation> matchingStations = firestationList.stream()
                     .filter(firestation -> firestation.getStation().equals(station)).toList();
-
+            firestationsFilteredStream.addAll(matchingStations);
         }
 
+        if (firestationsFilteredStream.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
+        }
 
-//        if (firestationsFilteredStream.isEmpty()) {
-//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
-//        }
         List<String> stationAddresses = new ArrayList<>();
         List<Person> matchingPersons = new ArrayList<>();
         for (Firestation firestation : firestationsFilteredStream) {
@@ -74,10 +81,6 @@ public class FloodController {
         // Make map from matching persons
         Map<String, Person> peopleMap = matchingPersons.stream()
                 .collect(Collectors.toMap(Person::getFirstName, person -> person));
-
-
-
-
 
 
         for (String stationAddress : stationAddresses) {
@@ -118,18 +121,10 @@ public class FloodController {
 
                 }
 
-
-
             }
 
-
         }
-
-
-//        responseJsonObject.add("people", personArray);
         return ResponseEntity.of(Optional.of(responseJsonObject));
-
-
     }
 
 

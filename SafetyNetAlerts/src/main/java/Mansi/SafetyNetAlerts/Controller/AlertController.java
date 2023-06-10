@@ -50,8 +50,8 @@ public class AlertController {
     /**
      * 2nd Url: ChildAlert URL
      *
-     * @param address Homeaddress
-     * @return listOfChildrenAtAddress
+     * @param address Home address
+     * @return list Of all Children At the Home Address
      */
     @GetMapping("/childAlert")
     @ResponseBody
@@ -144,6 +144,7 @@ public class AlertController {
      * @return Phone numbers of People matched to stationNumber
      */
     @GetMapping("/phoneAlert")
+    @ResponseBody
     public ResponseEntity<Object> getPhoneAlert(@RequestParam(name = "firestation") String firestation_number) {
 
         logger.info("HTTP GET request received at /phoneAlert URL");
@@ -167,8 +168,6 @@ public class AlertController {
                     if (!phoneNumbers.contains(matchedPerson.getPhone())) {
                         phoneNumbers.add(matchedPerson.getPhone());
                     }
-
-
                 }
             }
         }
@@ -182,4 +181,29 @@ public class AlertController {
 
     }
 
+
+    @GetMapping("/communityEmail")
+    @ResponseBody
+    public ResponseEntity<Object> getEmailsByCity(@RequestParam String city) {
+
+        logger.info("HTTP GET request received at /phoneAlert URL");
+
+        JsonObject responseJsonObject = new JsonObject();
+
+        List<Person> filteredStream = personList.stream()
+                .filter(person -> person.getCity().equals(city)).toList();
+
+        List<String> emailAddresses = new ArrayList<>();
+        for (Person person : filteredStream) {
+            emailAddresses.add(person.getEmail());
+        }
+
+        logger.info("Email Addresses List" + emailAddresses);
+
+        Gson gson = new Gson();
+        gson.toJson(emailAddresses);
+
+        return ResponseEntity.of(Optional.of(emailAddresses));
+
+    }
 }
