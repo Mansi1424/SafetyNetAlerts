@@ -49,13 +49,5 @@ public class AlertControllerTest {
                 .andExpect(content().json(expectedResult));
     }
 
-    @Test
-    public void testGetCommunityEmailURLReturnsResponse() throws Exception {
-        String expectedResult = ReadJsonFileForTests.readJsonFile("src/test/resources/GetCommunityEmailURLResult.json");
-        String city = "Culver";
-        mockMvc.perform(get("/communityEmail").param("city", city)
-                        .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().json(expectedResult));
-    }
+
 }

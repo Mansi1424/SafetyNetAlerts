@@ -38,8 +38,9 @@ public class AlertController {
 
     private static final Logger logger = LoggerFactory.getLogger(AlertController.class);
 
-    @Autowired
+
     public AlertController(ReadJson readJson, HelperMethods helperMethods) throws IOException {
+        // FIXME Do not store information in private instance field because it becomes stale, instead get latest info from readJson
         this.personList = readJson.returnPersonsList();
         this.firestationList = readJson.returnFirestationsList();
         this.medicalRecordList = readJson.returnMedicalRecordsList();
@@ -55,7 +56,7 @@ public class AlertController {
      */
     @GetMapping("/childAlert")
     @ResponseBody
-    public ResponseEntity<Object> getChildAlert(@RequestParam String address) throws ParseException {
+    public ResponseEntity<Object> getChildAlert(@RequestParam String address) throws ParseException, IOException {
 
 
         logger.info("HTTP GET request received at /childAlert URL");
@@ -145,7 +146,7 @@ public class AlertController {
      */
     @GetMapping("/phoneAlert")
     @ResponseBody
-    public ResponseEntity<Object> getPhoneAlert(@RequestParam(name = "firestation") String firestation_number) {
+    public ResponseEntity<Object> getPhoneAlert(@RequestParam(name = "firestation") String firestation_number) throws IOException {
 
         logger.info("HTTP GET request received at /phoneAlert URL");
 
@@ -182,28 +183,4 @@ public class AlertController {
     }
 
 
-    @GetMapping("/communityEmail")
-    @ResponseBody
-    public ResponseEntity<Object> getEmailsByCity(@RequestParam String city) {
-
-        logger.info("HTTP GET request received at /phoneAlert URL");
-
-        JsonObject responseJsonObject = new JsonObject();
-
-        List<Person> filteredStream = personList.stream()
-                .filter(person -> person.getCity().equals(city)).toList();
-
-        List<String> emailAddresses = new ArrayList<>();
-        for (Person person : filteredStream) {
-            emailAddresses.add(person.getEmail());
-        }
-
-        logger.info("Email Addresses List" + emailAddresses);
-
-        Gson gson = new Gson();
-        gson.toJson(emailAddresses);
-
-        return ResponseEntity.of(Optional.of(emailAddresses));
-
-    }
 }

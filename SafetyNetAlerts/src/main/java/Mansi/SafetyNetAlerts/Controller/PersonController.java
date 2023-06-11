@@ -1,5 +1,6 @@
 package mansi.safetynetalerts.controller;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import mansi.safetynetalerts.helper.HelperMethods;
@@ -206,6 +207,43 @@ public class PersonController {
 
         responseJsonObject.add("people", personArray);
         return ResponseEntity.of(Optional.of(responseJsonObject));
+
+    }
+
+
+    @GetMapping("/communityEmail")
+    public ResponseEntity<Object> getEmailsByCity(@RequestParam String city) throws IOException {
+
+        logger.info("HTTP GET request received at /phoneAlert URL");
+
+
+        List<Person> filteredStream = new ArrayList<>();
+        for (Person person : personList) {
+            if (person.getCity().equals(city)) {
+                filteredStream.add(person);
+            }
+        }
+
+        logger.info(String.valueOf(filteredStream));
+
+
+        // Return 404 if city is not found
+        if (filteredStream.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
+        }
+
+
+        List<String> emailAddresses = new ArrayList<>();
+        for (Person person : filteredStream) {
+            emailAddresses.add(person.getEmail());
+        }
+
+        logger.info("Email Addresses List" + emailAddresses);
+
+        Gson gson = new Gson();
+        gson.toJson(emailAddresses);
+
+        return ResponseEntity.of(Optional.of(emailAddresses));
 
     }
 }

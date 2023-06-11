@@ -8,6 +8,7 @@ import mansi.safetynetalerts.model.Firestation;
 import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +19,7 @@ import java.net.URL;
 import java.util.List;
 
 
-@Component
+@Service
 public class ReadJson {
     private final Gson gson = new Gson();
     private final JsonObject entireFile;
