@@ -48,38 +48,13 @@ public class FireStationController {
      * Get all firestations
      */
     @GetMapping("/allFirestation")
-    public JsonObject getFirestations() {
+    public List<Firestation> getFirestations() {
 
         logger.info("HTTP GET request received at /allFirestation Endpoint");
 
         logger.info("Firestations List = " + firestationList);
 
-        Set<String> stationsSet = new HashSet<String>();
-        for (Firestation firestation : firestationList) {
-            String stationNum = firestation.getStation();
-            stationsSet.add(stationNum);
-        }
-
-        JsonObject allStation = new JsonObject();
-
-        for (String station : stationsSet) {
-            JsonArray addresses = new JsonArray();
-
-            List<Firestation> filteredStream = firestationList.stream()
-                    .filter(firestation -> firestation.getStation().equals(station)).toList();
-
-            for (Firestation filteredStation : filteredStream) {
-                JsonObject addressObject = new JsonObject();
-                String address = filteredStation.getAddress();
-                String currentStation = filteredStation.getStation();
-                addresses.add(address);
-
-            }
-            allStation.add("station: " + station, addresses);
-
-        }
-
-        return allStation;
+        return firestationList;
 //        return stationsSet;
 
     }
