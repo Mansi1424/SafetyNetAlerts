@@ -8,6 +8,8 @@ import mansi.safetynetalerts.jsontopojo.ReadJson;
 import mansi.safetynetalerts.model.Firestation;
 import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,14 +32,15 @@ public class FloodController {
 
     private final List<Firestation> firestationList;
     private final List<Person> personList;
-    private final List<MedicalRecord> medicalRecordList;
     private final HelperMethods helperMethods;
+
+    private static final Logger logger = LoggerFactory.getLogger(FloodController.class);
+
 
     @Autowired
     public FloodController(ReadJson readJson, HelperMethods helperMethods) throws IOException {
         this.firestationList = readJson.returnFirestationsList();
         this.personList = readJson.returnPersonsList();
-        this.medicalRecordList = readJson.returnMedicalRecordsList();
         this.helperMethods = helperMethods;
     }
 
@@ -50,6 +53,9 @@ public class FloodController {
     @GetMapping("/flood")
     @ResponseBody
     public ResponseEntity<Object> getFloodInfo(@RequestParam List<String> stations) throws ParseException {
+
+
+        logger.info("HTTP GET request received at /flood/stations?stations=<a list of station_numbers> URL");
 
         JsonObject responseJsonObject = new JsonObject();
 
@@ -118,12 +124,11 @@ public class FloodController {
                     }
                     responseJsonObject.add(stationAddress, personArray);
 
-
                 }
-
             }
-
         }
+
+        logger.info("List of people grouped by household by list of station Numbers: " + responseJsonObject);
         return ResponseEntity.of(Optional.of(responseJsonObject));
     }
 

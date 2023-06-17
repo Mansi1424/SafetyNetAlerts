@@ -90,9 +90,7 @@ public class PersonController {
 
         logger.info("HTTP PUT request received at /person URL");
 
-        List<Person> filteredStream = personList.stream()
-                .filter(person -> person.getFirstName().equals(firstName))
-                .filter(person -> person.getLastName().equals(lastName)).toList();
+        List<Person> filteredStream = personList.stream().filter(person -> person.getFirstName().equals(firstName)).filter(person -> person.getLastName().equals(lastName)).toList();
 
         if (filteredStream.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
@@ -126,9 +124,7 @@ public class PersonController {
 
         logger.info("HTTP DELETE request received at /person URL");
 
-        List<Person> filteredStream = personList.stream()
-                .filter(person -> person.getFirstName().equals(firstName))
-                .filter(person -> person.getLastName().equals(lastName)).toList();
+        List<Person> filteredStream = personList.stream().filter(person -> person.getFirstName().equals(firstName)).filter(person -> person.getLastName().equals(lastName)).toList();
 
         if (filteredStream.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
@@ -154,7 +150,7 @@ public class PersonController {
     @GetMapping("/personInfo")
     @ResponseBody
     public ResponseEntity<Object> getPersonInfo(@RequestParam String firstName, @RequestParam String lastName) throws ParseException {
-        logger.info("HTTP GET request received at /personInfo URL");
+        logger.info("HTTP GET request received at /personInfo?firstName=<firstName>&lastName=<lastName> URL");
 
         JsonObject responseJsonObject = new JsonObject();
 
@@ -205,12 +201,20 @@ public class PersonController {
             personArray.add(person);
         }
 
+        logger.info("Person Info List: " + personArray);
+
         responseJsonObject.add("people", personArray);
         return ResponseEntity.of(Optional.of(responseJsonObject));
 
     }
 
 
+    /**
+     * 7th URL /communityEmail
+     *
+     * @param city city
+     * @return List Of Emails
+     */
     @GetMapping("/communityEmail")
     public ResponseEntity<Object> getEmailsByCity(@RequestParam String city) throws IOException {
 

@@ -1,8 +1,6 @@
 package mansi.safetynetalerts.jsontopojo;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 import mansi.safetynetalerts.model.Firestation;
 import mansi.safetynetalerts.model.MedicalRecord;
@@ -16,7 +14,7 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.List;
+import java.util.*;
 
 
 @Service
@@ -69,6 +67,7 @@ public class ReadJson {
         }.getType();
 
         List<Firestation> firestations = gson.fromJson(firestationsObject, type);
+
 
         return firestations;
     }

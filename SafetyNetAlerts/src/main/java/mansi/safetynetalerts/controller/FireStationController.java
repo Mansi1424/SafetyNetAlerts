@@ -33,7 +33,6 @@ public class FireStationController {
 
     private final HelperMethods helperMethods;
 
-
     private static final Logger logger = LoggerFactory.getLogger(FireStationController.class);
 
     public FireStationController(ReadJson readJson, HelperMethods helperMethods) throws IOException {
@@ -49,13 +48,39 @@ public class FireStationController {
      * Get all firestations
      */
     @GetMapping("/allFirestation")
-    public List<Firestation> getFirestations() {
+    public JsonObject getFirestations() {
 
-        logger.info("HTTP GET request received at /firestation URL");
+        logger.info("HTTP GET request received at /allFirestation Endpoint");
 
         logger.info("Firestations List = " + firestationList);
 
-        return firestationList;
+        Set<String> stationsSet = new HashSet<String>();
+        for (Firestation firestation : firestationList) {
+            String stationNum = firestation.getStation();
+            stationsSet.add(stationNum);
+        }
+
+        JsonObject allStation = new JsonObject();
+
+        for (String station : stationsSet) {
+            JsonArray addresses = new JsonArray();
+
+            List<Firestation> filteredStream = firestationList.stream()
+                    .filter(firestation -> firestation.getStation().equals(station)).toList();
+
+            for (Firestation filteredStation : filteredStream) {
+                JsonObject addressObject = new JsonObject();
+                String address = filteredStation.getAddress();
+                String currentStation = filteredStation.getStation();
+                addresses.add(address);
+
+            }
+            allStation.add("station: " + station, addresses);
+
+        }
+
+        return allStation;
+//        return stationsSet;
 
     }
 
@@ -68,7 +93,7 @@ public class FireStationController {
     @ResponseBody
     public Firestation addFirestation(@RequestBody Firestation newFirestation) {
 
-        logger.info("HTTP POST request received at /firestation URL");
+        logger.info("HTTP POST request received at /firestation Endpoint");
 
         firestationList.add(newFirestation);
 
@@ -88,7 +113,7 @@ public class FireStationController {
     @ResponseBody
     public ResponseEntity<Object> replaceFirestation(@PathVariable("address") String address, @PathVariable("station") String station, @RequestBody String stationNumber) {
 
-        logger.info("HTTP PUT request received at /firestation URL");
+        logger.info("HTTP PUT request received at /firestation Endpoint");
 
         List<Firestation> filteredStream = firestationList.stream()
                 .filter(firestation -> firestation.getAddress().contains(address))
@@ -118,7 +143,7 @@ public class FireStationController {
     public ResponseEntity<Object> deleteFirestation(@PathVariable("address") String address, @PathVariable("station") String station) {
 
         StringBuilder respMessage = new StringBuilder();
-        logger.info("HTTP DELETE request received at /firestation URL");
+        logger.info("HTTP DELETE request received at /firestation Endpoint");
 
         List<Firestation> filteredStream = firestationList.stream()
                 .filter(firestation -> firestation.getAddress().equals(address))
@@ -149,7 +174,7 @@ public class FireStationController {
     @ResponseBody
     public ResponseEntity<Object> getPerson(@RequestParam String stationNumber) throws ParseException {
 
-        logger.info("HTTP GET request received at /firestation URL");
+        logger.info("HTTP GET request received at /firestation?stationNumber=<station_number> URL");
         JsonObject responseJsonObject = new JsonObject();
 
         List<Firestation> filteredStream = firestationList.stream()
@@ -217,7 +242,7 @@ public class FireStationController {
         summary.addProperty("adults", adults);
         filteredPersonList.add(summary);
 
-        logger.info("Person List" + filteredPersonList);
+        logger.info("Person List at station " + stationNumber + ": " + filteredPersonList);
 
         // Turn list of persons to JsonArray to be a part of a JsonObject
         JsonArray personArray = new JsonArray();
@@ -241,7 +266,7 @@ public class FireStationController {
     public ResponseEntity<Object> getFire(@RequestParam String address) throws ParseException {
         JsonObject responseJsonObject = new JsonObject();
 
-        logger.info("HTTP GET request received at /fire URL");
+        logger.info("HTTP GET request received at /fire?address=<address> URL");
 
         List<Firestation> filteredStream = firestationList.stream()
                 .filter(firestation -> firestation.getAddress().equals(address)).toList();
@@ -304,7 +329,7 @@ public class FireStationController {
             filteredPersonList.add(personJson);
         }
 
-        logger.info("Person List" + filteredPersonList);
+        logger.info("List of people at address: " + filteredPersonList);
 
         // Turn list of persons to JsonArray to be a part of a JsonObject
         JsonArray personArray = new JsonArray();
@@ -316,33 +341,5 @@ public class FireStationController {
         return ResponseEntity.of(Optional.of(responseJsonObject));
 
     }
-
-
-    /**
-     * Method used by /fire url to get MedRecord by first/lastName
-     *
-     * @param firstName firstNameOfPerson
-     * @param lastName  lastNameOfPerson
-     * @return MedicalRecord MedicalRecordOfPerson
-     */
-//    public MedicalRecord findRecordByName(String firstName, String lastName) throws ParseException {
-//        List<Person> filteredStream = personList.stream()
-//                .filter(person -> person.getFirstName().equals(firstName) && person.getLastName().equals(lastName)).toList();
-//        int age = 0;
-//
-//        MedicalRecord matchingRecord = null;
-//        for (Person person : filteredStream) {
-//            for (MedicalRecord medicalRecord : medicalRecordList) {
-//                if (Objects.equals(medicalRecord.getFirstName(), person.getFirstName())
-//                        && Objects.equals(medicalRecord.getLastName(), person.getLastName())) {
-//                    matchingRecord = medicalRecord;
-//                }
-//            }
-//        }
-//
-//        return matchingRecord;
-//
-//
-//    }
 }
 

@@ -30,8 +30,6 @@ public class AlertControllerTest {
 
     @Test
     public void testGetChildAlertURLReturns404EmptyJsonWhenNoChildren() throws Exception {
-        EmptyJsonBody empty = new EmptyJsonBody();
-        String emptyBody = empty.toString();
         String address = "112 Steppes Pl";
         mockMvc.perform(get("/childAlert").param("address", address)
                         .accept(MediaType.APPLICATION_JSON))

@@ -11,7 +11,6 @@ import mansi.safetynetalerts.model.MedicalRecord;
 import mansi.safetynetalerts.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,7 +39,6 @@ public class AlertController {
 
 
     public AlertController(ReadJson readJson, HelperMethods helperMethods) throws IOException {
-        // FIXME Do not store information in private instance field because it becomes stale, instead get latest info from readJson
         this.personList = readJson.returnPersonsList();
         this.firestationList = readJson.returnFirestationsList();
         this.medicalRecordList = readJson.returnMedicalRecordsList();
@@ -72,16 +70,7 @@ public class AlertController {
         int age = 0;
         for (Person person : filteredStream) {
             for (MedicalRecord matchedRecord : medicalRecordList) {
-                if (Objects.equals(matchedRecord.getFirstName(), person.getFirstName())) {
-                    String personDob = matchedRecord.getBirthdate();
-                    age = helperMethods.getAge(personDob);
-
-                    if (age < 18) {
-                        children.add(matchedRecord);
-                    } else {
-                        nonChildrenList.add(person);
-                    }
-                }
+                processPeopleAge(children, nonChildrenList, person, matchedRecord);
             }
         }
         // Get Children
@@ -134,6 +123,20 @@ public class AlertController {
             return ResponseEntity.of(Optional.of(responseJsonObject));
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new EmptyJsonBody());
+        }
+    }
+
+    private void processPeopleAge(List<MedicalRecord> children, List<Person> nonChildrenList, Person person, MedicalRecord matchedRecord) throws ParseException {
+        int age;
+        if (Objects.equals(matchedRecord.getFirstName(), person.getFirstName())) {
+            String personDob = matchedRecord.getBirthdate();
+            age = helperMethods.getAge(personDob);
+
+            if (age < 18) {
+                children.add(matchedRecord);
+            } else {
+                nonChildrenList.add(person);
+            }
         }
     }
 
