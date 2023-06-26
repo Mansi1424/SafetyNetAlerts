@@ -1,6 +1,7 @@
 package mansi.safetynetalerts.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mansi.safetynetalerts.controller.MedicalRecordController;
 import mansi.safetynetalerts.helper.HelperMethods;
 import mansi.safetynetalerts.jsontopojo.ReadJson;
 import org.junit.jupiter.api.Test;
@@ -18,7 +19,7 @@ import java.util.List;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(mansi.safetynetalerts.controller.MedicalRecordController.class)
+@WebMvcTest(MedicalRecordController.class)
 @Import({ReadJson.class, HelperMethods.class})
 public class MedicalRecordControllerTest {
 

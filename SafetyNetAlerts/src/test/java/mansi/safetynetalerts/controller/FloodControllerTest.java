@@ -1,6 +1,7 @@
 package mansi.safetynetalerts.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import mansi.safetynetalerts.controller.FloodController;
 import mansi.safetynetalerts.helper.HelperMethods;
 import mansi.safetynetalerts.helper.ReadJsonFileForTests;
 import mansi.safetynetalerts.jsontopojo.EmptyJsonBody;
@@ -22,7 +23,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(mansi.safetynetalerts.controller.FloodController.class)
+@WebMvcTest(FloodController.class)
 @Import({ReadJson.class, HelperMethods.class})
 public class FloodControllerTest {
 
