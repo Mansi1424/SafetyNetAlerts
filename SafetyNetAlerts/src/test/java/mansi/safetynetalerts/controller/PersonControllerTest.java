@@ -10,6 +10,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(PersonController.class)
+@WebMvcTest(mansi.safetynetalerts.controller.PersonController.class)
 @Import({ReadJson.class, HelperMethods.class})
 public class PersonControllerTest {
 
@@ -30,19 +31,48 @@ public class PersonControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
+    public void testGetAllPersons() throws Exception {
+        List<String> stations = new ArrayList<>();
+        mockMvc.perform(get("/person")
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
+    }
+
+    @Test
+    public void testDeletingAPerson() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders
+                        .delete("/person/John/Boyd")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
+    }
+
+    @Test
+    public void testDeletingAPersonReturns404() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders
+                        .delete("/person/Mansi/Boyd")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
+
+    }
+
+
+    @Test
     public void testGetPersonInfoURLTestReturnsNull() throws Exception {
         mockMvc.perform(get("/personInfo").param("firstName", "John")
                         .param("lastName", "Cena")
                         .accept(MediaType.APPLICATION_JSON))
-                        .andExpect(status().isNotFound());
+                .andExpect(status().isNotFound());
 
     }
+
 
     @Test
     public void testGetPersonInfoURLTest() throws Exception {
         String expectedResult = ReadJsonFileForTests.readJsonFile("src/test/resources/GetPersonInfoURLResult.json");
         mockMvc.perform(get("/personInfo")
-                        .param("firstName", "John")
+                        .param("firstName", "Roger")
                         .param("lastName", "Boyd")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())

@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(AlertController.class)
+@WebMvcTest(mansi.safetynetalerts.controller.AlertController.class)
 @Import({ReadJson.class, HelperMethods.class})
 public class AlertControllerTest {
 

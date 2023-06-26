@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(FloodController.class)
+@WebMvcTest(mansi.safetynetalerts.controller.FloodController.class)
 @Import({ReadJson.class, HelperMethods.class})
 public class FloodControllerTest {
 

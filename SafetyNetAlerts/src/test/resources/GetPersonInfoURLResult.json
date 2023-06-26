@@ -1,18 +1,13 @@
 {
     "people": [
         {
-            "firstName": "John",
+            "firstName": "Roger",
             "lastName": "Boyd",
             "address": "1509 Culver St",
-            "age": "39",
+            "age": "5",
             "email": "jaboyd@email.com",
-            "medications": [
-                "aznol:350mg",
-                "hydrapermazol:100mg"
-            ],
-            "allergies": [
-                "nillacilan"
-            ]
+            "medications": [],
+            "allergies": []
         }
     ]
 }
